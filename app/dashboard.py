@@ -12,7 +12,7 @@ from scipy.optimize import minimize
 from dotenv import load_dotenv
 from openai import OpenAI
 
-# Suppress annoying ARIMA warnings for a cleaner console
+# Suppress warnings for a professional console output
 warnings.filterwarnings("ignore")
 
 # -------------------------------------------------
@@ -24,7 +24,7 @@ st.set_page_config(
     layout="wide"
 )
 
-# Custom CSS for "High-Class" Engineering Aesthetics
+# High-Class Custom CSS for Glassmorphism, Premium Hover, and Engineering UI
 st.markdown("""
     <style>
     /* Main Background */
@@ -32,33 +32,63 @@ st.markdown("""
         background-color: #0a0e14;
         color: #e0e6ed;
     }
+    
     /* Metric Card Styling */
     div[data-testid="metric-container"] {
         background-color: #161b22;
         border: 1px solid #30363d;
-        padding: 15px;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
     div[data-testid="stMetricValue"] {
         color: #00d4ff;
+        font-weight: 700;
     }
-    /* Custom Header */
+    
+    /* Custom Header Gradient */
     .main-header {
         background: linear-gradient(90deg, #001529 0%, #003366 100%);
-        padding: 20px;
-        border-radius: 12px;
-        border-left: 8px solid #00d4ff;
-        margin-bottom: 25px;
+        padding: 25px;
+        border-radius: 15px;
+        border-left: 10px solid #00d4ff;
+        margin-bottom: 30px;
     }
-    /* Buttons */
+    
+    /* AI Report Text Box */
+    .ai-report-box {
+        background-color: #161b22;
+        padding: 25px;
+        border-radius: 12px;
+        border: 1px solid #30363d;
+        line-height: 1.6;
+        font-size: 1.05rem;
+    }
+    
+    /* HIGH-CLASS BUTTON HOVER EFFECTS */
     .stButton>button {
         width: 100%;
-        border-radius: 5px;
+        border-radius: 8px;
         background-color: #00d4ff;
-        color: #0a0e14;
+        color: #0a0e14 !important;
         font-weight: bold;
+        height: 3.5em;
         border: none;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2);
+        cursor: pointer;
+    }
+
+    .stButton>button:hover {
+        background-color: #ffffff !important;
+        color: #00d4ff !important;
+        border: 2px solid #00d4ff;
+        box-shadow: 0 0 25px rgba(0, 212, 255, 0.6);
+        transform: translateY(-3px); /* Subtle lift effect */
+    }
+
+    .stButton>button:active {
+        transform: translateY(1px);
     }
     </style>
     """, unsafe_allow_html=True)
@@ -73,7 +103,7 @@ client = OpenAI(
 )
 
 # -------------------------------------------------
-# DATA LOADING & CLEANING (Keep your existing logic)
+# DATA LOADING & CLEANING
 # -------------------------------------------------
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RES_PATH = os.path.join(BASE_DIR, "data", "cwc_reservoirs.xlsx")
@@ -88,7 +118,6 @@ def load_and_clean_data():
     res = pd.read_excel(RES_PATH)
     rain = pd.read_excel(RAIN_PATH)
     
-    # Cleaning
     for df in [res, rain]:
         df.columns = df.columns.str.strip()
     
@@ -112,7 +141,7 @@ def load_and_clean_data():
 res_df_full, rain_df_full, collectors_df = load_and_clean_data()
 
 if res_df_full is None:
-    st.error("Critical Data Files Missing")
+    st.error("Critical Data Assets Missing from /data directory.")
     st.stop()
 
 # -------------------------------------------------
@@ -120,7 +149,7 @@ if res_df_full is None:
 # -------------------------------------------------
 with st.sidebar:
     st.image("https://img.icons8.com/fluency/96/water-tower.png", width=80)
-    st.title("Control Center")
+    st.title("Command Center")
     st.markdown("---")
     
     regions = sorted(res_df_full["REGION"].dropna().unique())
@@ -136,58 +165,65 @@ with st.sidebar:
     st.subheader("Forecast Parameters")
     f_months = st.slider("Forecast Horizon (Months)", 1, 12, 3)
 
-# Filter Data
+# -------------------------------------------------
+# CALCULATIONS
+# -------------------------------------------------
 res_df = res_df_full[res_df_full["RESERVOIR"] == sel_res].sort_values("DATE")
 latest = res_df.iloc[-1]
 current_storage = latest["CURRENT STORAGE BCM"]
 capacity = latest["FULL RESERVOIR LEVEL BCM"]
+utilization = (current_storage / capacity) * 100
 
 # -------------------------------------------------
 # MAIN DASHBOARD UI
 # -------------------------------------------------
 st.markdown(f"""
     <div class="main-header">
-        <h1 style='margin:0; color:white;'>AQUA NEXUS: {sel_res.upper()}</h1>
-        <p style='margin:0; opacity:0.8;'>Strategic Reservoir Analytics & Autonomous Optimization</p>
+        <h1 style='margin:0; color:white; letter-spacing: 1px;'>AQUA NEXUS: {sel_res.upper()}</h1>
+        <p style='margin:0; opacity:0.8; font-weight: 300;'>Hydrological Intelligence & Autonomous Optimization Protocol</p>
     </div>
     """, unsafe_allow_html=True)
 
 # TOP KPI ROW
 kpi1, kpi2, kpi3, kpi4 = st.columns(4)
-utilization = (current_storage / capacity) * 100
-
 kpi1.metric("Current Storage", f"{current_storage:.2f} BCM")
 kpi2.metric("Total Capacity", f"{capacity:.2f} BCM")
-kpi3.metric("Utilization", f"{utilization:.1f}%", delta=f"{utilization-75:.1f}% vs Target")
-kpi4.metric("Asset Status", "ACTIVE", delta_color="normal")
+kpi3.metric("Utilization", f"{utilization:.1f}%", delta=f"{utilization-75:.1f}% vs Goal")
+kpi4.metric("System Health", "NOMINAL", delta_color="normal")
 
 # -------------------------------------------------
 # ANALYTICS SECTION
 # -------------------------------------------------
+st.markdown("---")
 col_chart, col_risk = st.columns([2, 1])
 
 with col_chart:
     st.subheader("📈 Predictive Storage Optimization")
     
-    # --- Processing & ARIMA (Simplified for stability) ---
     res_df["Month"] = res_df["DATE"].dt.month
     res_df["Year"] = res_df["DATE"].dt.year
     monthly_storage = res_df.groupby(["Year", "Month"])["CURRENT STORAGE BCM"].mean().reset_index()
     
-    # Simple ARIMA fallback
     try:
         model = ARIMA(monthly_storage["CURRENT STORAGE BCM"], order=(1,1,1))
         fit = model.fit()
         forecast = fit.forecast(steps=f_months)
     except:
-        forecast = [current_storage] * f_months # Fallback
+        forecast = pd.Series([current_storage] * f_months)
 
-    # Plotly Glass Chart
     fig = go.Figure()
-    fig.add_trace(go.Scatter(y=monthly_storage["CURRENT STORAGE BCM"].tail(12), name="Historical", line=dict(color='#00d4ff', width=3)))
-    fig.add_trace(go.Scatter(x=list(range(11, 11+f_months)), y=forecast, name="AI Forecast", line=dict(color='#ff4b4b', dash='dot')))
-    fig.update_layout(template="plotly_dark", paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', height=350, margin=dict(l=0,r=0,t=0,b=0))
-    st.plotly_chart(fig, use_container_width=True)
+    fig.add_trace(go.Scatter(y=monthly_storage["CURRENT STORAGE BCM"].tail(12), name="Historical (12m)", line=dict(color='#00d4ff', width=3)))
+    fig.add_trace(go.Scatter(x=list(range(11, 11+f_months)), y=forecast, name="AI Projection", line=dict(color='#ff4b4b', dash='dot', width=3)))
+    
+    fig.update_layout(
+        template="plotly_dark", 
+        paper_bgcolor='rgba(0,0,0,0)', 
+        plot_bgcolor='rgba(0,0,0,0)', 
+        height=400, 
+        margin=dict(l=0,r=0,t=20,b=0),
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
+    )
+    st.plotly_chart(fig, width="stretch")
 
 with col_risk:
     st.subheader("🚨 Risk Assessment")
@@ -205,92 +241,67 @@ with col_risk:
         st.success(f"NOMINAL: STABLE ({proj_pct:.1f}%)")
         risk_status = "SAFE"
         
-    st.write("Current analysis indicates the reservoir will reach a stable state within the forecast window based on seasonal inflow factors.")
+    st.info(f"Asset utilization: {utilization:.1f}%. Predicted trend toward {proj_pct:.1f}% capacity.")
 
 # -------------------------------------------------
-# AI & ALERTS
+# AI & ADMINISTRATIVE PROTOCOLS
 # -------------------------------------------------
 st.markdown("---")
 c_alert, c_ai = st.columns(2)
 
 with c_alert:
     st.subheader("📢 Administrative Protocol")
-    
-    # Resolve Collector Details for Alert
     if collectors_df is not None and risk_status != "SAFE":
-        collector_row = collectors_df[collectors_df["State"] == sel_state]
-        if not collector_row.empty:
-            c_name = collector_row.iloc[0].get("Collector Name", "Officer In Charge")
-            c_email = collector_row.iloc[0].get("Email", "N/A")
+        
+        # KEY ERROR FIX: Dynamic column identification
+        possible_state_cols = ["State", "STATE", "State Name", "State/UT"]
+        actual_state_col = next((c for c in possible_state_cols if c in collectors_df.columns), None)
+
+        if actual_state_col:
+            collector_row = collectors_df[collectors_df[actual_state_col].astype(str).str.title() == sel_state]
             
-            st.warning(f"Protocol: Dispatching Alert to {c_name}")
-            alert_code = f"""
-            [EMERGENCY PROTOCOL ACTIVE]
-            TO: {c_name} ({c_email})
-            SUBJECT: {risk_status} WARNING - {sel_res}
-            
-            Current Utilization: {utilization:.1f}%
-            Projected Level ({f_months}mo): {proj_pct:.1f}%
-            Action: Initiate local contingency plan.
-            """
-            st.code(alert_code, language="markdown")
+            if not collector_row.empty:
+                c_name = collector_row.iloc[0].get("Collector Name", "District Collector")
+                st.warning(f"Protocol: High-Priority Alert generated for {c_name}")
+                
+                alert_code = f"""
+                [EMERGENCY PROTOCOL ACTIVE]
+                ASSET: {sel_res} | RISK: {risk_status}
+                CURRENT UTIL: {utilization:.1f}%
+                PROJECTION: {proj_pct:.1f}%
+                ACTION: Contact {c_name} for immediate localized contingency.
+                """
+                st.code(alert_code, language="markdown")
+            else:
+                st.info(f"No specific collector mapping found for {sel_state}.")
         else:
-            st.info("No localized collector found. Forwarding to State Authority.")
+            st.error("Column 'State' not detected in Collector CSV.")
     else:
-        st.success("✅ System Status: Nominal. No alerts dispatched.")
+        st.success("✅ Protocol Status: System Nominal.")
 
 with c_ai:
-    st.subheader("🤖 AI Executive Intelligence")
-    
-    # Compile detailed context for the AI
-    data_payload = {
-        "reservoir": sel_res,
-        "state": sel_state,
-        "current_storage": float(current_storage),
-        "capacity": float(capacity),
-        "utilization": float(utilization),
-        "risk": risk_status,
-        "forecast_horizon": f_months,
-        "projected_pct": float(proj_pct)
-    }
-
-    if st.button("Generate Detailed Briefing"):
-        with st.spinner("Analyzing hydrological patterns and sensor telemetry..."):
-            
+    st.subheader("🤖 AI Intelligence Briefing")
+    # This button now uses the premium CSS hover effects
+    if st.button("Generate Detailed Strategic Report"):
+        with st.spinner("Synthesizing multi-modal hydrological data..."):
             prompt = f"""
-            As a Senior Hydrological Systems Analyst, provide a detailed executive summary for:
-            Reservoir: {data_payload['reservoir']} ({data_payload['state']})
-            Current Metrics: {data_payload['current_storage']} BCM out of {data_payload['capacity']} BCM ({data_payload['utilization']:.1f}% utilization).
-            Risk Assessment: {data_payload['risk']} status.
-            Forecast: Projected to hit {data_payload['projected_pct']:.1f}% capacity in {data_payload['forecast_horizon']} months.
+            Act as a Senior Hydrological Engineer. Provide a briefing for:
+            Reservoir: {sel_res}, State: {sel_state}
+            Current: {current_storage} BCM ({utilization:.1f}% full).
+            Risk: {risk_status}. Forecast: {proj_pct:.1f}% in {f_months} months.
 
-            Structure the response exactly as follows:
-            1. 📊 SITUATION OVERVIEW: Explain current water levels in plain English.
-            2. 🔍 PREDICTIVE INSIGHTS: Analyze what the {data_payload['projected_pct']}% projection means for the near future.
-            3. ⚙️ OPERATIONAL GUIDANCE: Specific recommendation on gate release or conservation.
-            4. ⚠️ RISK MITIGATION: A one-sentence final warning or safety assurance.
-            
-            Use a professional, calm, and data-driven tone.
+            Provide 4 structured sections:
+            1. 📊 SITUATION: Current state analysis.
+            2. 🔍 PREDICTIVE: Implications of the {proj_pct:.1f}% projection.
+            3. ⚙️ OPERATIONAL: Gate/Release recommendations.
+            4. ⚠️ SUMMARY: Final security statement.
             """
-
             try:
                 response = client.chat.completions.create(
                     model="Qwen/Qwen2.5-7B-Instruct",
-                    messages=[
-                        {"role": "system", "content": "You are a senior reservoir engineer and disaster management expert."},
-                        {"role": "user", "content": prompt}
-                    ],
-                    temperature=0.7
+                    messages=[{"role": "user", "content": prompt}]
                 )
-                
                 report = response.choices[0].message.content
-                
-                # Render the report in a professional box
-                st.markdown(f"""
-                <div style="background-color: #161b22; padding: 20px; border-radius: 10px; border: 1px solid #30363d;">
-                    {report}
-                </div>
-                """, unsafe_allow_html=True)
-                
+                st.markdown(f'<div class="ai-report-box">{report}</div>', unsafe_allow_html=True)
             except Exception as e:
-                st.error(f"Intelligence Engine Offline: {str(e)}")
+                st.error(f"Intelligence Module Error: {str(e)}")
