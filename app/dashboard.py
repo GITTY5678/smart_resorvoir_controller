@@ -44,6 +44,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 RES_PATH = os.path.join(BASE_DIR, "data", "cwc_reservoirs.xlsx")
 RAIN_PATH = os.path.join(BASE_DIR, "data", "climate.xlsx")
+COLLECTOR_PATH = os.path.join(BASE_DIR, "data", "india_district_collectors.csv")
 
 if not os.path.exists(RES_PATH):
     st.error("Reservoir dataset not found.")
@@ -55,6 +56,31 @@ if not os.path.exists(RAIN_PATH):
 
 res_df_full = pd.read_excel(RES_PATH)
 rain_df_full = pd.read_excel(RAIN_PATH)
+
+# Load collector dataset (NEW)
+if os.path.exists(COLLECTOR_PATH):
+    collectors_df = pd.read_csv(COLLECTOR_PATH)
+    collectors_df.columns = collectors_df.columns.str.strip()
+    collectors_df.columns = collectors_df.columns.str.strip()
+
+    # Normalize possible state column names
+    if "State" in collectors_df.columns:
+        state_col = "State"
+    elif "STATE" in collectors_df.columns:
+        state_col = "STATE"
+    elif "State Name" in collectors_df.columns:
+        state_col = "State Name"
+    elif "State/UT" in collectors_df.columns:
+        state_col = "State/UT"
+    else:
+        st.error("State column not found in collector dataset.")
+        st.stop()
+
+    collectors_df[state_col] = (
+        collectors_df[state_col].astype(str).str.strip().str.title()
+    )
+else:
+    collectors_df = None
 
 # -------------------------------------------------
 # CLEAN DATA
@@ -196,7 +222,6 @@ rain_series = merged_df["Rainfall_mm"]
 
 rain_model = ARIMA(rain_series, order=(2,1,2))
 rain_fit = rain_model.fit()
-
 rain_forecast = rain_fit.forecast(steps=forecast_months)
 
 st.line_chart(rain_forecast)
@@ -223,30 +248,22 @@ def dynamic_optimization(current_storage, rainfall_forecast, capacity):
         total_cost = 0
 
         for t in range(horizon):
-
             inflow = rainfall_forecast[t] * inflow_factor
             storage = storage + inflow - releases[t]
-
             storage = max(0, min(storage, capacity))
 
             overflow_penalty = max(0, storage - capacity) ** 2
             drought_penalty = max(0, 0.3 * capacity - storage) ** 2
 
-            variation_penalty = 0
-            if t > 0:
-                variation_penalty = (releases[t] - releases[t-1]) ** 2
-
             total_cost += (
                 10 * overflow_penalty +
-                5 * drought_penalty +
-                1 * variation_penalty
+                5 * drought_penalty
             )
 
         return total_cost
 
     initial_guess = np.full(horizon, 0.1 * capacity)
     bounds = [(0, capacity) for _ in range(horizon)]
-
     result = minimize(objective, initial_guess, bounds=bounds)
 
     return result.x
@@ -265,10 +282,8 @@ storage_sim = []
 storage = current_storage
 
 for i in range(forecast_months):
-
     inflow = rain_forecast.values[i] * inflow_factor
     storage = storage + inflow - optimal_releases[i]
-
     storage = max(0, min(storage, capacity))
     storage_sim.append(storage)
 
@@ -280,8 +295,7 @@ fig_opt = go.Figure()
 fig_opt.add_trace(go.Scatter(
     y=storage_sim,
     mode="lines+markers",
-    name="Optimized Storage",
-    line=dict(color="cyan")
+    name="Optimized Storage"
 ))
 fig_opt.update_layout(template="plotly_dark", height=400)
 st.plotly_chart(fig_opt, width="stretch")
@@ -296,19 +310,68 @@ forecast_pct = (final_storage / capacity) * 100
 st.markdown("---")
 st.subheader("Risk Assessment")
 
+risk_status = "SAFE"
+
 if final_storage >= capacity:
     st.error("Reservoir At Maximum Capacity")
+    risk_status = "CRITICAL"
 elif forecast_pct > 85:
     st.warning("High Flood Risk")
+    risk_status = "FLOOD"
 elif forecast_pct < 25:
     st.warning("Drought Risk")
+    risk_status = "DROUGHT"
 else:
     st.success("Safe Operating Zone")
 
 st.metric("Projected Storage %", f"{forecast_pct:.2f}%")
 
 # -------------------------------------------------
-# AI EXECUTIVE SUMMARY (QWEN)
+# 🚨 DISTRICT COLLECTOR ALERT SYSTEM (ADDED)
+# -------------------------------------------------
+
+st.markdown("---")
+st.header("District Collector Alert System")
+
+if collectors_df is not None and risk_status != "SAFE":
+
+    collector_row = collectors_df[
+        collectors_df["State"] == selected_state
+    ]
+
+    if not collector_row.empty:
+        collector_name = collector_row.iloc[0]["Collector Name"]
+        collector_email = collector_row.iloc[0]["Email"]
+        collector_phone = collector_row.iloc[0]["Phone"]
+
+        alert_message = f"""
+        ALERT NOTICE
+
+        Reservoir: {selected_reservoir}
+        State: {selected_state}
+        Risk Level: {risk_status}
+        Projected Storage: {forecast_pct:.2f}%
+
+        Immediate administrative attention required.
+        """
+
+        st.error("🚨 ALERT TRIGGERED")
+        st.code(alert_message)
+
+        st.write(f"Collector: {collector_name}")
+        st.write(f"Email: {collector_email}")
+        st.write(f"Phone: {collector_phone}")
+
+    else:
+        st.warning("Collector mapping not found.")
+
+elif collectors_df is None:
+    st.info("Collector dataset not loaded.")
+else:
+    st.success("No emergency alert required.")
+
+# -------------------------------------------------
+# AI EXECUTIVE SUMMARY (UNCHANGED)
 # -------------------------------------------------
 
 st.markdown("---")

@@ -1,0 +1,726 @@
+S.No,State/UT,District,Designation,Official Email,Phone
+1,Andaman & Nicobar,South Andaman,Deputy Commissioner,dcand@and.nic.in,03192-233089
+2,Andaman & Nicobar,North & Middle Andaman,Deputy Commissioner,dcnmad@gmail.com,03192-262999
+3,Andaman & Nicobar,Nicobar,District Magistrate,dcnicobar2@gmail.com,03193-265177
+4,Andhra Pradesh,Ananthapuramu,Collector & DM,collector_antp@ap.gov.in,9493188801
+5,Andhra Pradesh,Chittoor,Collector & DM,collectorchittoor@gmail.com,8572240333
+6,Andhra Pradesh,East Godavari,Collector & DM,collector_egd@ap.gov.in,8842365424
+7,Andhra Pradesh,Guntur,Collector & DM,collector_gntr@ap.gov.in,8632234990
+8,Andhra Pradesh,Krishna,Collector & DM,collector_krsn@ap.gov.in,8672252668
+9,Andhra Pradesh,Kurnool,Collector & DM,collector_krnl@ap.gov.in,8518220006
+10,Andhra Pradesh,Prakasam,Collector & DM,collector_pkm@ap.gov.in,8886616001
+11,Andhra Pradesh,Srikakulam,Collector & DM,collector_sklm@ap.gov.in,8942222565
+12,Andhra Pradesh,Nellore,Collector & DM,collector_nlr@ap.gov.in,8612331999
+13,Andhra Pradesh,Visakhapatnam,Collector & DM,collector_vspm@ap.gov.in,8912563121
+14,Andhra Pradesh,Vizianagaram,Collector & DM,collector_vznm@ap.gov.in,8922276720
+15,Andhra Pradesh,West Godavari,Collector & DM,collector_wgd@ap.gov.in,8812230051
+16,Andhra Pradesh,YSR Kadapa,Collector & DM,collector_kdp@ap.gov.in,8562244676
+17,Arunachal Pradesh,Anjaw,Deputy Commissioner,dc-anjaw-arn@nic.in,9436256688
+18,Arunachal Pradesh,Changlang,Deputy Commissioner,dc-chang-arn@nic.in,03808-222221
+19,Arunachal Pradesh,Dibang Valley,Deputy Commissioner,dc-dvalley-arn@nic.in,03801-249222
+20,Arunachal Pradesh,East Kameng,Deputy Commissioner,dc-ekmg-arn@nic.in,9703934553
+21,Arunachal Pradesh,East Siang,Deputy Commissioner,dc-esiang-arn@nic.in,0368-2222340
+22,Arunachal Pradesh,Kra Daadi,Deputy Commissioner,dc-krd-arn@gov.in,3788264301
+23,Arunachal Pradesh,Kurung Kumey,Deputy Commissioner,dc-kkumey-arn@nic.in,8794176533
+24,Arunachal Pradesh,Lohit,Deputy Commissioner,dc-lohit-arn@nic.in,03804-224485
+25,Arunachal Pradesh,Longding,Deputy Commissioner,dc-longding-arn@nic.in,
+26,Arunachal Pradesh,Lower Dibang Valley,Deputy Commissioner,dc-ldvalley-arn@nic.in,03803-222223
+27,Arunachal Pradesh,Lower Subansiri,Deputy Commissioner,dc-lsuban-arn@nic.in,9717748244
+28,Arunachal Pradesh,Namsai,Deputy Commissioner,dc-namsai-arn@gov.in,03806-262228
+29,Arunachal Pradesh,Papum Pare,Deputy Commissioner,dc-ppare-arn@nic.in,9436041816
+30,Arunachal Pradesh,Shi Yomi,Deputy Commissioner,dc-shy-arn@gov.in,9436836666
+31,Arunachal Pradesh,Siang,Deputy Commissioner,dc-siang-arn@gov.in,8730804663
+32,Arunachal Pradesh,Tawang,Deputy Commissioner,dc-twng-arn@nic.in,03794-222221
+33,Arunachal Pradesh,Tirap,Deputy Commissioner,dc-tirap-arn@nic.in,03786-222222
+34,Arunachal Pradesh,Upper Siang,Deputy Commissioner,dc-usiang-arn@nic.in,9436058006
+35,Arunachal Pradesh,West Kameng,Deputy Commissioner,dc-wkmg-arn@nic.in,03782-222021
+36,Assam,Baksa,Deputy Commissioner,dc-baksa@nic.in,03624-234524
+37,Assam,Barpeta,Deputy Commissioner,dc-barpeta@nic.in,03665-252129
+38,Assam,Biswanath,Deputy Commissioner,dc-biswanath@gov.in,03715-230071
+39,Assam,Bongaigaon,Deputy Commissioner,dc-bongaigaon@nic.in,03664-230889
+40,Assam,Cachar,Deputy Commissioner,dc-cachar@nic.in,03842-245056
+41,Assam,Charaideo,Deputy Commissioner,dc-charaideo@nic.in,03772-256567
+42,Assam,Chirang,Deputy Commissioner,dc-chirang@nic.in,03664-241992
+43,Assam,Darrang,Deputy Commissioner,dc-darrang@nic.in,03713-222135
+44,Assam,Dhemaji,Deputy Commissioner,dc-dhemaji@nic.in,03753-224208
+45,Assam,Dhubri,Deputy Commissioner,dc-dhubri@nic.in,03662-230050
+46,Assam,Dibrugarh,Deputy Commissioner,dc-dibrugarh@nic.in,0373-2316063
+47,Assam,Dima Hasao,Deputy Commissioner,dc-nchills@nic.in,03673-236222
+48,Assam,Goalpara,Deputy Commissioner,dc-goalpara@nic.in,03663-240030
+49,Assam,Golaghat,Deputy Commissioner,dc-golaghat@nic.in,03774-280222
+50,Assam,Hailakandi,Deputy Commissioner,dc-hailakandi@nic.in,03844-222251
+51,Assam,Hojai,Deputy Commissioner,dchojai@gmail.com,03674-284455
+52,Assam,Jorhat,Deputy Commissioner,dc-jorhat@nic.in,0376-2320020
+53,Assam,Kamrup Metropolitan,Deputy Commissioner,dc-kamrupm@nic.in,0361-2540149
+54,Assam,Kamrup,Deputy Commissioner,dc-kamrup@nic.in,0361-2684404
+55,Assam,Karbi Anglong,Deputy Commissioner,dc-kanglong@nic.in,03671-272257
+56,Assam,Karimganj,Deputy Commissioner,dc-karimganj@nic.in,03843-262103
+57,Assam,Kokrajhar,Deputy Commissioner,dc-kokrajhar@nic.in,03661-270741
+58,Assam,Lakhimpur,Deputy Commissioner,dc-lakhimpur@nic.in,03752-222196
+59,Assam,Majuli,Deputy Commissioner,dc-majuli@nic.in,03775-274424
+60,Assam,Morigaon,Deputy Commissioner,dc-morigaon@nic.in,03678-240225
+61,Assam,Nagaon,Deputy Commissioner,dc-nagaon@nic.in,03672-233185
+62,Assam,Nalbari,Deputy Commissioner,dc-nalbari@nic.in,03624-220496
+63,Assam,Sivasagar,Deputy Commissioner,dc-sibsagar@nic.in,03772-220011
+64,Assam,Sonitpur,Deputy Commissioner,dc-sonitpur@nic.in,03712-220011
+65,Assam,South Salmara,Deputy Commissioner,dc-southsalmara@nic.in,9788144301
+66,Assam,Tinsukia,Deputy Commissioner,dc-tinsukia@nic.in,0374-2331572
+67,Assam,Udalguri,Deputy Commissioner,dc-udalguri@nic.in,03690-1646641
+68,Assam,West Karbi Anglong,Deputy Commissioner,dc.westkarbianglong@gov.in,03677-230030
+69,Bihar,Araria,District Magistrate,dm-araria.bih@nic.in,06453-222001
+70,Bihar,Arwal,District Magistrate,dm-arwal.bih@nic.in,06337-228995
+71,Bihar,Aurangabad,District Magistrate,dm-aurangabad.bih@nic.in,06186-223167
+72,Bihar,Banka,District Magistrate,dm-banka.bih@nic.in,06424-232304
+73,Bihar,Begusarai,District Magistrate,dm-begusarai.bih@nic.in,06243-222285
+74,Bihar,Bhagalpur,District Magistrate,dm-bhagalpur.bih@nic.in,0641-2402200
+75,Bihar,Bhojpur,District Magistrate,dm-bhojpur.bih@nic.in,06182-221312
+76,Bihar,Buxar,District Magistrate,dm-buxar.bih@nic.in,06183-222336
+77,Bihar,Darbhanga,District Magistrate,dm-darbhanga.bih@nic.in,06272-245378
+78,Bihar,East Champaran,District Magistrate,dm-motihari.bih@nic.in,06252-242700
+79,Bihar,Gaya,District Magistrate,dm-gaya.bih@nic.in,0631-2222900
+80,Bihar,Gopalganj,District Magistrate,dm-gopalganj.bih@nic.in,06156-226001
+81,Bihar,Jamui,District Magistrate,dm-jamui.bih@nic.in,06345-222002
+82,Bihar,Jehanabad,District Magistrate,dm-jehanabad.bih@nic.in,06114-223072
+83,Bihar,Khagaria,District Magistrate,dm-khagaria.bih@nic.in,06244-222135
+84,Bihar,Kishanganj,District Magistrate,dm-kishanganj.bih@nic.in,06456-222530
+85,Bihar,Kaimur,District Magistrate,dm-bhabhua.bih@nic.in,06189-223241
+86,Bihar,Katihar,District Magistrate,dm-katihar.bih@nic.in,06452-230581
+87,Bihar,Lakhisarai,District Magistrate,dm-lakhisarai.bih@nic.in,06346-232124
+88,Bihar,Madhubani,District Magistrate,dm-madhubani.bih@nic.in,06276-222217
+89,Bihar,Munger,District Magistrate,dm-munger.bih@nic.in,06344-222402
+90,Bihar,Madhepura,District Magistrate,dm-madhepura.bih@nic.in,06476-222741
+91,Bihar,Muzaffarpur,District Magistrate,dm-muzaffarpur.bih@nic.in,0621-2214280
+92,Bihar,Nalanda,District Magistrate,dm-nalanda.bih@nic.in,06112-232777
+93,Bihar,Nawada,District Magistrate,dm-nawada.bih@nic.in,06324-212400
+94,Bihar,Patna,District Magistrate,dm-patna.bih@nic.in,0612-2219133
+95,Bihar,Purnia,District Magistrate,dm-purnia.bih@nic.in,06454-244200
+96,Bihar,Rohtas,District Magistrate,dm-rohtas.bih@nic.in,06184-222281
+97,Bihar,Saharsa,District Magistrate,dm-saharsa.bih@nic.in,06478-222201
+98,Bihar,Samastipur,District Magistrate,dm-samastipur.bih@nic.in,06274-240555
+99,Bihar,Saran,District Magistrate,dm-saran.bih@nic.in,06162-246300
+100,Bihar,Sheikhpura,District Magistrate,dm-sheikhpura.bih@nic.in,06341-222201
+101,Bihar,Sheohar,District Magistrate,dm-sheohar.bih@nic.in,06228-242202
+102,Bihar,Sitamarhi,District Magistrate,dm-sitamarhi.bih@nic.in,06226-244222
+103,Bihar,Siwan,District Magistrate,dm-siwan.bih@nic.in,06154-243063
+104,Bihar,Supaul,District Magistrate,dm-supaul.bih@nic.in,06473-222206
+105,Bihar,Vaishali,District Magistrate,dm-vaishali.bih@nic.in,06224-233253
+106,Bihar,West Champaran,District Magistrate,dm-westchamparan.bih@nic.in,06254-242200
+107,Chhattisgarh,Balod,Collector & DM,collector.balod@cgstate.gov.in,07727-222240
+108,Chhattisgarh,Baloda Bazar,Collector & DM,collector.balodabazar@cgstate.gov.in,07727-222093
+109,Chhattisgarh,Bastar,Collector & DM,collector.bastar@cgstate.gov.in,07782-222126
+110,Chhattisgarh,Bemetara,Collector & DM,collector.bemetara@cgstate.gov.in,
+111,Chhattisgarh,Bijapur,Collector & DM,collector.bijapur@cgstate.gov.in,07853-222201
+112,Chhattisgarh,Bilaspur,Collector & DM,collector.bilaspur@cgstate.gov.in,07752-222267
+113,Chhattisgarh,Dantewada,Collector & DM,collector.dantewada@cgstate.gov.in,07856-222245
+114,Chhattisgarh,Dhamtari,Collector & DM,collector.dhamtari@cgstate.gov.in,07722-232124
+115,Chhattisgarh,Durg,Collector & DM,collector.durg@cgstate.gov.in,0788-2322035
+116,Chhattisgarh,Gariaband,Collector & DM,collector.gariaband@cgstate.gov.in,
+117,Chhattisgarh,Janjgir-Champa,Collector & DM,collector.janjgir@cgstate.gov.in,07817-222269
+118,Chhattisgarh,Jashpur,Collector & DM,collector.jashpur@cgstate.gov.in,07763-222235
+119,Chhattisgarh,Kanker,Collector & DM,collector.kanker@cgstate.gov.in,07868-222210
+120,Chhattisgarh,Kabirdham,Collector & DM,collector.kabirdham@cgstate.gov.in,07741-232001
+121,Chhattisgarh,Kondagaon,Collector & DM,collector.kondagaon@cgstate.gov.in,
+122,Chhattisgarh,Korba,Collector & DM,collector.korba@cgstate.gov.in,07759-224100
+123,Chhattisgarh,Koriya,Collector & DM,collector.koriya@cgstate.gov.in,07771-222245
+124,Chhattisgarh,Mahasamund,Collector & DM,collector.mahasamund@cgstate.gov.in,07723-222217
+125,Chhattisgarh,Mungeli,Collector & DM,collector.mungeli@cgstate.gov.in,
+126,Chhattisgarh,Narayanpur,Collector & DM,collector.narayanpur@cgstate.gov.in,07781-252030
+127,Chhattisgarh,Raigarh,Collector & DM,collector.raigarh@cgstate.gov.in,07762-222340
+128,Chhattisgarh,Raipur,Collector & DM,collector.raipur@cgstate.gov.in,0771-2235091
+129,Chhattisgarh,Rajnandgaon,Collector & DM,collector.rajnandgaon@cgstate.gov.in,07744-222291
+130,Chhattisgarh,Sukma,Collector & DM,collector.sukma@cgstate.gov.in,
+131,Chhattisgarh,Surajpur,Collector & DM,collector.surajpur@cgstate.gov.in,
+132,Chhattisgarh,Surguja,Collector & DM,collector.surguja@cgstate.gov.in,07774-222208
+133,Goa,North Goa,Collector,collectornorthgoa@gmail.com,0832-2224468
+134,Goa,South Goa,Collector,collectorsouthgoa@gmail.com,0832-2705190
+135,Gujarat,Ahmedabad,Collector,collector-ahd@gujarat.gov.in,079-23251507
+136,Gujarat,Amreli,Collector,collector-amreli@gujarat.gov.in,02792-223001
+137,Gujarat,Anand,Collector,collector-anand@gujarat.gov.in,02692-261604
+138,Gujarat,Aravalli,Collector,collector-aravalli@gujarat.gov.in,
+139,Gujarat,Banaskantha,Collector,collector-banas@gujarat.gov.in,02742-252028
+140,Gujarat,Bharuch,Collector,collector-bharuch@gujarat.gov.in,02642-247851
+141,Gujarat,Bhavnagar,Collector,collector-bhavnagar@gujarat.gov.in,0278-2429740
+142,Gujarat,Botad,Collector,collector-botad@gujarat.gov.in,
+143,Gujarat,Chhota Udaipur,Collector,collector-chhota-udaipur@gujarat.gov.in,
+144,Gujarat,Dahod,Collector,collector-dahod@gujarat.gov.in,02673-230011
+145,Gujarat,Dang,Collector,collector-dang@gujarat.gov.in,02631-220225
+146,Gujarat,Devbhoomi Dwarka,Collector,collector-devbhoomi-dwarka@gujarat.gov.in,
+147,Gujarat,Gandhinagar,Collector,collector-gandhinagar@gujarat.gov.in,079-23222001
+148,Gujarat,Gir Somnath,Collector,collector-gir-somnath@gujarat.gov.in,
+149,Gujarat,Jamnagar,Collector,collector-jamnagar@gujarat.gov.in,0288-2551444
+150,Gujarat,Junagadh,Collector,collector-junagadh@gujarat.gov.in,0285-2624701
+151,Gujarat,Kutch,Collector,collector-kutch@gujarat.gov.in,02832-250355
+152,Gujarat,Kheda,Collector,collector-kheda@gujarat.gov.in,02694-243051
+153,Gujarat,Mahesana,Collector,collector-mahesana@gujarat.gov.in,02762-220101
+154,Gujarat,Mahisagar,Collector,collector-mahisagar@gujarat.gov.in,
+155,Gujarat,Morbi,Collector,collector-morbi@gujarat.gov.in,
+156,Gujarat,Narmada,Collector,collector-narmada@gujarat.gov.in,02640-221201
+157,Gujarat,Navsari,Collector,collector-navsari@gujarat.gov.in,02637-253101
+158,Gujarat,Panchmahal,Collector,collector-panchmahal@gujarat.gov.in,02672-241201
+159,Gujarat,Patan,Collector,collector-patan@gujarat.gov.in,02766-223535
+160,Gujarat,Porbandar,Collector,collector-porbandar@gujarat.gov.in,0286-2222301
+161,Gujarat,Rajkot,Collector,collector-rajkot@gujarat.gov.in,0281-2471601
+162,Gujarat,Sabarkantha,Collector,collector-sabarkantha@gujarat.gov.in,02772-240140
+163,Gujarat,Surat,Collector,collector-surat@gujarat.gov.in,0261-2422027
+164,Gujarat,Surendranagar,Collector,collector-surendranagar@gujarat.gov.in,02752-284101
+165,Gujarat,Tapi,Collector,collector-tapi@gujarat.gov.in,02626-220201
+166,Gujarat,Vadodara,Collector,collector-vadodara@gujarat.gov.in,0265-2418901
+167,Gujarat,Valsad,Collector,collector-valsad@gujarat.gov.in,02632-258701
+168,Haryana,Ambala,Deputy Commissioner,dc-ambala@hry.nic.in,0171-2534093
+169,Haryana,Bhiwani,Deputy Commissioner,dc-bhiwani@hry.nic.in,01664-242444
+170,Haryana,Charkhi Dadri,Deputy Commissioner,dc-charkhidadri@hry.nic.in,
+171,Haryana,Faridabad,Deputy Commissioner,dc-faridabad@hry.nic.in,0129-2413031
+172,Haryana,Fatehabad,Deputy Commissioner,dc-fatehabad@hry.nic.in,01667-220222
+173,Haryana,Gurugram,Deputy Commissioner,dc-gurugram@hry.nic.in,0124-2322100
+174,Haryana,Hisar,Deputy Commissioner,dc-hisar@hry.nic.in,01662-234040
+175,Haryana,Jhajjar,Deputy Commissioner,dc-jhajjar@hry.nic.in,01251-255003
+176,Haryana,Jind,Deputy Commissioner,dc-jind@hry.nic.in,01681-242222
+177,Haryana,Kaithal,Deputy Commissioner,dc-kaithal@hry.nic.in,01746-230026
+178,Haryana,Karnal,Deputy Commissioner,dc-karnal@hry.nic.in,0184-2260027
+179,Haryana,Kurukshetra,Deputy Commissioner,dc-kurukshetra@hry.nic.in,01744-220010
+180,Haryana,Mahendragarh,Deputy Commissioner,dc-mahendragarh@hry.nic.in,01285-254002
+181,Haryana,Mewat (Nuh),Deputy Commissioner,dc-mewat@hry.nic.in,01267-221013
+182,Haryana,Palwal,Deputy Commissioner,dc-palwal@hry.nic.in,01275-240001
+183,Haryana,Panchkula,Deputy Commissioner,dc-panchkula@hry.nic.in,0172-2574029
+184,Haryana,Panipat,Deputy Commissioner,dc-panipat@hry.nic.in,0180-2644012
+185,Haryana,Rewari,Deputy Commissioner,dc-rewari@hry.nic.in,01274-225001
+186,Haryana,Rohtak,Deputy Commissioner,dc-rohtak@hry.nic.in,01262-274110
+187,Haryana,Sirsa,Deputy Commissioner,dc-sirsa@hry.nic.in,01666-240200
+188,Haryana,Sonipat,Deputy Commissioner,dc-sonipat@hry.nic.in,0130-2235000
+189,Haryana,Yamunanagar,Deputy Commissioner,dc-yamunanagar@hry.nic.in,01732-235001
+190,Himachal Pradesh,Bilaspur,Deputy Commissioner,dc-bilaspur-hp@nic.in,01978-224052
+191,Himachal Pradesh,Chamba,Deputy Commissioner,dc-chamba-hp@nic.in,01899-222224
+192,Himachal Pradesh,Hamirpur,Deputy Commissioner,dc-hamirpur-hp@nic.in,01972-222222
+193,Himachal Pradesh,Kangra,Deputy Commissioner,dc-kangra-hp@nic.in,01892-222220
+194,Himachal Pradesh,Kinnaur,Deputy Commissioner,dc-kinnaur-hp@nic.in,01786-222236
+195,Himachal Pradesh,Kullu,Deputy Commissioner,dc-kullu-hp@nic.in,01902-222222
+196,Himachal Pradesh,Lahaul & Spiti,Deputy Commissioner,dc-lahaul-hp@nic.in,01900-222244
+197,Himachal Pradesh,Mandi,Deputy Commissioner,dc-mandi-hp@nic.in,01905-222264
+198,Himachal Pradesh,Shimla,Deputy Commissioner,dc-shimla-hp@nic.in,0177-2800010
+199,Himachal Pradesh,Sirmaur,Deputy Commissioner,dc-sirmaur-hp@nic.in,01702-222244
+200,Himachal Pradesh,Solan,Deputy Commissioner,dc-solan-hp@nic.in,01792-222234
+201,Himachal Pradesh,Una,Deputy Commissioner,dc-una-hp@nic.in,01975-226000
+202,Jharkhand,Bokaro,Deputy Commissioner,dc-bokaro@jharkhand.gov.in,06542-222600
+203,Jharkhand,Chatra,Deputy Commissioner,dc-chatra@jharkhand.gov.in,06541-222236
+204,Jharkhand,Deoghar,Deputy Commissioner,dc-deoghar@jharkhand.gov.in,06432-232422
+205,Jharkhand,Dhanbad,Deputy Commissioner,dc-dhanbad@jharkhand.gov.in,0326-2302273
+206,Jharkhand,Dumka,Deputy Commissioner,dc-dumka@jharkhand.gov.in,06434-222215
+207,Jharkhand,East Singhbhum,Deputy Commissioner,dc-eastsinghbhum@jharkhand.gov.in,0657-2430055
+208,Jharkhand,Garhwa,Deputy Commissioner,dc-garhwa@jharkhand.gov.in,06561-222253
+209,Jharkhand,Giridih,Deputy Commissioner,dc-giridih@jharkhand.gov.in,06532-222274
+210,Jharkhand,Godda,Deputy Commissioner,dc-godda@jharkhand.gov.in,06422-222222
+211,Jharkhand,Gumla,Deputy Commissioner,dc-gumla@jharkhand.gov.in,06524-222230
+212,Jharkhand,Hazaribagh,Deputy Commissioner,dc-hazaribagh@jharkhand.gov.in,06546-222266
+213,Jharkhand,Jamtara,Deputy Commissioner,dc-jamtara@jharkhand.gov.in,06433-222230
+214,Jharkhand,Khunti,Deputy Commissioner,dc-khunti@jharkhand.gov.in,
+215,Jharkhand,Koderma,Deputy Commissioner,dc-koderma@jharkhand.gov.in,06534-222247
+216,Jharkhand,Latehar,Deputy Commissioner,dc-latehar@jharkhand.gov.in,06565-222232
+217,Jharkhand,Lohardaga,Deputy Commissioner,dc-lohardaga@jharkhand.gov.in,06526-222233
+218,Jharkhand,Pakur,Deputy Commissioner,dc-pakur@jharkhand.gov.in,06436-222238
+219,Jharkhand,Palamu,Deputy Commissioner,dc-palamu@jharkhand.gov.in,06562-222253
+220,Jharkhand,Ramgarh,Deputy Commissioner,dc-ramgarh@jharkhand.gov.in,
+221,Jharkhand,Ranchi,Deputy Commissioner,dc-ranchi@jharkhand.gov.in,0651-2208002
+222,Jharkhand,Sahibganj,Deputy Commissioner,dc-sahibganj@jharkhand.gov.in,06436-222238
+223,Jharkhand,Seraikela-Kharsawan,Deputy Commissioner,dc-seraikela@jharkhand.gov.in,06597-222221
+224,Jharkhand,Simdega,Deputy Commissioner,dc-simdega@jharkhand.gov.in,06525-222224
+225,Jharkhand,West Singhbhum,Deputy Commissioner,dc-westsinghbhum@jharkhand.gov.in,06582-222351
+226,Karnataka,Bagalkot,Deputy Commissioner,dc.bagalkot@karnataka.gov.in,08354-235500
+227,Karnataka,Ballari,Deputy Commissioner,dc.bellary@karnataka.gov.in,08392-255800
+228,Karnataka,Belagavi,Deputy Commissioner,dc.belgaum@karnataka.gov.in,0831-2404600
+229,Karnataka,Bengaluru Rural,Deputy Commissioner,dc.bangalorerural@karnataka.gov.in,080-27274201
+230,Karnataka,Bengaluru Urban,Deputy Commissioner,dc.bangaloreurban@karnataka.gov.in,080-22371760
+231,Karnataka,Bidar,Deputy Commissioner,dc.bidar@karnataka.gov.in,08482-226600
+232,Karnataka,Chamarajanagar,Deputy Commissioner,dc.chamarajanagar@karnataka.gov.in,08226-222600
+233,Karnataka,Chikkaballapura,Deputy Commissioner,dc.chikkaballapura@karnataka.gov.in,08156-272700
+234,Karnataka,Chikkamagaluru,Deputy Commissioner,dc.chickmagalur@karnataka.gov.in,08262-222600
+235,Karnataka,Chitradurga,Deputy Commissioner,dc.chitradurga@karnataka.gov.in,08194-222600
+236,Karnataka,Dakshina Kannada,Deputy Commissioner,dc.dakshinakannada@karnataka.gov.in,0824-2220006
+237,Karnataka,Davanagere,Deputy Commissioner,dc.davanagere@karnataka.gov.in,08192-252600
+238,Karnataka,Dharwad,Deputy Commissioner,dc.dharwad@karnataka.gov.in,0836-2447600
+239,Karnataka,Gadag,Deputy Commissioner,dc.gadag@karnataka.gov.in,08372-237600
+240,Karnataka,Hassan,Deputy Commissioner,dc.hassan@karnataka.gov.in,08172-268600
+241,Karnataka,Haveri,Deputy Commissioner,dc.haveri@karnataka.gov.in,08375-233600
+242,Karnataka,Kalaburagi,Deputy Commissioner,dc.gulbarga@karnataka.gov.in,08472-278600
+243,Karnataka,Kodagu,Deputy Commissioner,dc.kodagu@karnataka.gov.in,08272-228600
+244,Karnataka,Kolar,Deputy Commissioner,dc.kolar@karnataka.gov.in,08152-243600
+245,Karnataka,Koppal,Deputy Commissioner,dc.koppal@karnataka.gov.in,08539-220600
+246,Karnataka,Mandya,Deputy Commissioner,dc.mandya@karnataka.gov.in,08232-222600
+247,Karnataka,Mysuru,Deputy Commissioner,dc.mysore@karnataka.gov.in,0821-2419600
+248,Karnataka,Raichur,Deputy Commissioner,dc.raichur@karnataka.gov.in,08532-220600
+249,Karnataka,Ramanagara,Deputy Commissioner,dc.ramanagara@karnataka.gov.in,08027-272600
+250,Karnataka,Shivamogga,Deputy Commissioner,dc.shimoga@karnataka.gov.in,08182-222600
+251,Karnataka,Tumakuru,Deputy Commissioner,dc.tumkur@karnataka.gov.in,0816-2272600
+252,Karnataka,Udupi,Deputy Commissioner,dc.udupi@karnataka.gov.in,0820-2524600
+253,Karnataka,Uttara Kannada,Deputy Commissioner,dc.uttarakannada@karnataka.gov.in,08382-226600
+254,Karnataka,Vijayapura,Deputy Commissioner,dc.bijapur@karnataka.gov.in,08352-251600
+255,Karnataka,Yadgir,Deputy Commissioner,dc.yadgir@karnataka.gov.in,08473-253600
+256,Kerala,Alappuzha,District Collector,collector.alappuzha@kerala.gov.in,0477-2251557
+257,Kerala,Ernakulam,District Collector,collector.ernakulam@kerala.gov.in,0484-2422822
+258,Kerala,Idukki,District Collector,collector.idukki@kerala.gov.in,04862-232221
+259,Kerala,Kannur,District Collector,collector.kannur@kerala.gov.in,0497-2700233
+260,Kerala,Kasaragod,District Collector,collector.kasaragod@kerala.gov.in,04994-257021
+261,Kerala,Kollam,District Collector,collector.kollam@kerala.gov.in,0474-2794900
+262,Kerala,Kottayam,District Collector,collector.kottayam@kerala.gov.in,0481-2562455
+263,Kerala,Kozhikode,District Collector,collector.kozhikode@kerala.gov.in,0495-2371334
+264,Kerala,Malappuram,District Collector,collector.malappuram@kerala.gov.in,0483-2734045
+265,Kerala,Palakkad,District Collector,collector.palakkad@kerala.gov.in,0491-2505201
+266,Kerala,Pathanamthitta,District Collector,collector.pathanamthitta@kerala.gov.in,0468-2222294
+267,Kerala,Thiruvananthapuram,District Collector,collector.thiruvananthapuram@kerala.gov.in,0471-2333177
+268,Kerala,Thrissur,District Collector,collector.thrissur@kerala.gov.in,0487-2360300
+269,Kerala,Wayanad,District Collector,collector.wayanad@kerala.gov.in,04936-202122
+270,Madhya Pradesh,Agar Malwa,Collector & DM,collector.agarmalwa@mp.gov.in,
+271,Madhya Pradesh,Alirajpur,Collector & DM,collector.alirajpur@mp.gov.in,07394-232088
+272,Madhya Pradesh,Anuppur,Collector & DM,collector.anuppur@mp.gov.in,07659-222302
+273,Madhya Pradesh,Ashoknagar,Collector & DM,collector.ashoknagar@mp.gov.in,07539-253000
+274,Madhya Pradesh,Balaghat,Collector & DM,collector.balaghat@mp.gov.in,07632-242232
+275,Madhya Pradesh,Barwani,Collector & DM,collector.barwani@mp.gov.in,07290-233038
+276,Madhya Pradesh,Betul,Collector & DM,collector.betul@mp.gov.in,07141-234404
+277,Madhya Pradesh,Bhind,Collector & DM,collector.bhind@mp.gov.in,07534-250010
+278,Madhya Pradesh,Bhopal,Collector & DM,collector.bhopal@mp.gov.in,0755-2441700
+279,Madhya Pradesh,Burhanpur,Collector & DM,collector.burhanpur@mp.gov.in,07325-252120
+280,Madhya Pradesh,Chhatarpur,Collector & DM,collector.chhatarpur@mp.gov.in,07682-244005
+281,Madhya Pradesh,Chhindwara,Collector & DM,collector.chhindwara@mp.gov.in,07162-244055
+282,Madhya Pradesh,Damoh,Collector & DM,collector.damoh@mp.gov.in,07812-222404
+283,Madhya Pradesh,Datia,Collector & DM,collector.datia@mp.gov.in,07522-234001
+284,Madhya Pradesh,Dewas,Collector & DM,collector.dewas@mp.gov.in,07272-258888
+285,Madhya Pradesh,Dhar,Collector & DM,collector.dhar@mp.gov.in,07292-222220
+286,Madhya Pradesh,Dindori,Collector & DM,collector.dindori@mp.gov.in,07644-232005
+287,Madhya Pradesh,Guna,Collector & DM,collector.guna@mp.gov.in,07542-256220
+288,Madhya Pradesh,Gwalior,Collector & DM,collector.gwalior@mp.gov.in,0751-2447703
+289,Madhya Pradesh,Harda,Collector & DM,collector.harda@mp.gov.in,07577-222206
+290,Madhya Pradesh,Hoshangabad,Collector & DM,collector.hoshangabad@mp.gov.in,07574-255161
+291,Madhya Pradesh,Indore,Collector & DM,collector.indore@mp.gov.in,0731-2536300
+292,Madhya Pradesh,Jabalpur,Collector & DM,collector.jabalpur@mp.gov.in,0761-2677888
+293,Madhya Pradesh,Jhabua,Collector & DM,collector.jhabua@mp.gov.in,07392-244433
+294,Madhya Pradesh,Katni,Collector & DM,collector.katni@mp.gov.in,07622-255040
+295,Madhya Pradesh,Khandwa,Collector & DM,collector.khandwa@mp.gov.in,0733-2221100
+296,Madhya Pradesh,Khargone,Collector & DM,collector.khargone@mp.gov.in,07282-222255
+297,Madhya Pradesh,Mandla,Collector & DM,collector.mandla@mp.gov.in,07642-252263
+298,Madhya Pradesh,Mandsaur,Collector & DM,collector.mandsaur@mp.gov.in,07422-248330
+299,Madhya Pradesh,Morena,Collector & DM,collector.morena@mp.gov.in,07532-243200
+300,Madhya Pradesh,Narsinghpur,Collector & DM,collector.narsinghpur@mp.gov.in,07792-230044
+301,Madhya Pradesh,Neemuch,Collector & DM,collector.neemuch@mp.gov.in,07423-222004
+302,Madhya Pradesh,Niwari,Collector & DM,collector.niwari@mp.gov.in,
+303,Madhya Pradesh,Panna,Collector & DM,collector.panna@mp.gov.in,07732-252221
+304,Madhya Pradesh,Raisen,Collector & DM,collector.raisen@mp.gov.in,07482-222006
+305,Madhya Pradesh,Rajgarh,Collector & DM,collector.rajgarh@mp.gov.in,07372-252003
+306,Madhya Pradesh,Ratlam,Collector & DM,collector.ratlam@mp.gov.in,07412-240046
+307,Madhya Pradesh,Rewa,Collector & DM,collector.rewa@mp.gov.in,07662-232218
+308,Madhya Pradesh,Sagar,Collector & DM,collector.sagar@mp.gov.in,07582-222345
+309,Madhya Pradesh,Satna,Collector & DM,collector.satna@mp.gov.in,07672-400344
+310,Madhya Pradesh,Sehore,Collector & DM,collector.sehore@mp.gov.in,07562-229111
+311,Madhya Pradesh,Seoni,Collector & DM,collector.seoni@mp.gov.in,07692-220260
+312,Madhya Pradesh,Shahdol,Collector & DM,collector.shahdol@mp.gov.in,07652-242024
+313,Madhya Pradesh,Shajapur,Collector & DM,collector.shajapur@mp.gov.in,07364-225044
+314,Madhya Pradesh,Sheopur,Collector & DM,collector.sheopur@mp.gov.in,07530-222334
+315,Madhya Pradesh,Shivpuri,Collector & DM,collector.shivpuri@mp.gov.in,07492-232244
+316,Madhya Pradesh,Sidhi,Collector & DM,collector.sidhi@mp.gov.in,07822-252250
+317,Madhya Pradesh,Singrauli,Collector & DM,collector.singrauli@mp.gov.in,07805-261126
+318,Madhya Pradesh,Tikamgarh,Collector & DM,collector.tikamgarh@mp.gov.in,07683-244100
+319,Madhya Pradesh,Ujjain,Collector & DM,collector.ujjain@mp.gov.in,0734-2511210
+320,Madhya Pradesh,Umaria,Collector & DM,collector.umaria@mp.gov.in,07653-222236
+321,Madhya Pradesh,Vidisha,Collector & DM,collector.vidisha@mp.gov.in,07592-233800
+322,Maharashtra,Ahmednagar,Collector,collectorahmednagar@gmail.com,0241-2323701
+323,Maharashtra,Akola,Collector,collectorakola@gmail.com,0724-2430511
+324,Maharashtra,Amravati,Collector,collectoramravati@gmail.com,0721-2662777
+325,Maharashtra,Aurangabad,Collector,collectoraurangabad@gmail.com,0240-2331136
+326,Maharashtra,Beed,Collector,collectorbeed@gmail.com,02442-222222
+327,Maharashtra,Bhandara,Collector,collectorbhandara@gmail.com,07184-252252
+328,Maharashtra,Buldhana,Collector,collectorbuldhana@gmail.com,07262-242256
+329,Maharashtra,Chandrapur,Collector,collectorchandrapur@gmail.com,07172-267200
+330,Maharashtra,Dhule,Collector,collectordhule@gmail.com,02562-232021
+331,Maharashtra,Gadchiroli,Collector,collectorgadchiroli@gmail.com,07132-222224
+332,Maharashtra,Gondia,Collector,collectorgondia@gmail.com,07182-232399
+333,Maharashtra,Hingoli,Collector,collectorhingoli@gmail.com,02456-222239
+334,Maharashtra,Jalgaon,Collector,collectorjalgaon@gmail.com,0257-2227755
+335,Maharashtra,Jalna,Collector,collectorjalna@gmail.com,02482-230200
+336,Maharashtra,Kolhapur,Collector,collectorkolhapur@gmail.com,0231-2650422
+337,Maharashtra,Latur,Collector,collectorlatur@gmail.com,02382-245333
+338,Maharashtra,Mumbai City,Collector,collectormumbai@gmail.com,022-22621167
+339,Maharashtra,Mumbai Suburban,Collector,collectormumbaisuburban@gmail.com,022-26530051
+340,Maharashtra,Nagpur,Collector,collectornagpur@gmail.com,0712-2562668
+341,Maharashtra,Nanded,Collector,collectornanded@gmail.com,02462-236400
+342,Maharashtra,Nandurbar,Collector,collectornandurbar@gmail.com,02564-222222
+343,Maharashtra,Nashik,Collector,collectornashik@gmail.com,0253-2577777
+344,Maharashtra,Osmanabad,Collector,collectorosmanabad@gmail.com,02472-222333
+345,Maharashtra,Palghar,Collector,collectorpalghar@gmail.com,02525-255201
+346,Maharashtra,Parbhani,Collector,collectorparbhani@gmail.com,02452-222500
+347,Maharashtra,Pune,Collector,collectorpune@gmail.com,020-26125808
+348,Maharashtra,Raigad,Collector,collectorraigad@gmail.com,02141-222204
+349,Maharashtra,Ratnagiri,Collector,collectorratnagiri@gmail.com,02352-222222
+350,Maharashtra,Sangli,Collector,collectorsangli@gmail.com,0233-2374444
+351,Maharashtra,Satara,Collector,collectorsatara@gmail.com,02162-220222
+352,Maharashtra,Sindhudurg,Collector,collectorsindhudurg@gmail.com,02362-228222
+353,Maharashtra,Solapur,Collector,collectorsolapur@gmail.com,0217-2728888
+354,Maharashtra,Thane,Collector,collectorthane@gmail.com,022-25395001
+355,Maharashtra,Wardha,Collector,collectorwardha@gmail.com,07152-242400
+356,Maharashtra,Washim,Collector,collectorwashim@gmail.com,07252-232244
+357,Maharashtra,Yavatmal,Collector,collectoryavatmal@gmail.com,07232-242200
+358,Manipur,Bishnupur,Deputy Commissioner,dc-bishnupur-mn@nic.in,03875-263300
+359,Manipur,Chandel,Deputy Commissioner,dc-chandel-mn@nic.in,03827-222233
+360,Manipur,Churachandpur,Deputy Commissioner,dc-churachandpur-mn@nic.in,03874-234422
+361,Manipur,Imphal East,Deputy Commissioner,dc-imphaleast-mn@nic.in,0385-2450130
+362,Manipur,Imphal West,Deputy Commissioner,dc-imphalwest-mn@nic.in,0385-2410155
+363,Manipur,Jiribam,Deputy Commissioner,dc-jiribam-mn@nic.in,
+364,Manipur,Kakching,Deputy Commissioner,dc-kakching-mn@nic.in,
+365,Manipur,Kamjong,Deputy Commissioner,dc-kamjong-mn@nic.in,
+366,Manipur,Kangpokpi,Deputy Commissioner,dc-kangpokpi-mn@nic.in,
+367,Manipur,Noney,Deputy Commissioner,dc-noney-mn@nic.in,
+368,Manipur,Pherzawl,Deputy Commissioner,dc-pherzawl-mn@nic.in,
+369,Manipur,Senapati,Deputy Commissioner,dc-senapati-mn@nic.in,03872-246600
+370,Manipur,Tamenglong,Deputy Commissioner,dc-tamenglong-mn@nic.in,03836-222324
+371,Manipur,Tengnoupal,Deputy Commissioner,dc-tengnoupal-mn@nic.in,
+372,Manipur,Thoubal,Deputy Commissioner,dc-thoubal-mn@nic.in,03847-222218
+373,Manipur,Ukhrul,Deputy Commissioner,dc-ukhrul-mn@nic.in,03863-222222
+374,Meghalaya,East Garo Hills,Deputy Commissioner,dc-eastgarohills-meg@nic.in,03637-220232
+375,Meghalaya,East Jaintia Hills,Deputy Commissioner,dc-eastjaintiahills-meg@nic.in,
+376,Meghalaya,East Khasi Hills,Deputy Commissioner,dc-shillong-meg@nic.in,0364-2227282
+377,Meghalaya,North Garo Hills,Deputy Commissioner,dc-northgarohills-meg@nic.in,
+378,Meghalaya,Ri Bhoi,Deputy Commissioner,dc-ribhoi-meg@nic.in,0364-2534201
+379,Meghalaya,South Garo Hills,Deputy Commissioner,dc-southgarohills-meg@nic.in,03636-220223
+380,Meghalaya,South West Garo Hills,Deputy Commissioner,dc-swgarohills-meg@nic.in,
+381,Meghalaya,South West Khasi Hills,Deputy Commissioner,dc-swkhasihills-meg@nic.in,
+382,Meghalaya,West Garo Hills,Deputy Commissioner,dc-westgarohills-meg@nic.in,03632-222222
+383,Meghalaya,West Jaintia Hills,Deputy Commissioner,dc-westjaintiahills-meg@nic.in,03652-222218
+384,Meghalaya,West Khasi Hills,Deputy Commissioner,dc-westkhasihills-meg@nic.in,03652-222029
+385,Mizoram,Aizawl,Deputy Commissioner,dc-aizawl@mizoram.gov.in,0389-2322688
+386,Mizoram,Champhai,Deputy Commissioner,dc-champhai@mizoram.gov.in,03823-234588
+387,Mizoram,Hnahthial,Deputy Commissioner,dc-hnahthial@mizoram.gov.in,
+388,Mizoram,Kolasib,Deputy Commissioner,dc-kolasib@mizoram.gov.in,03837-222388
+389,Mizoram,Khawzawl,Deputy Commissioner,dc-khawzawl@mizoram.gov.in,
+390,Mizoram,Lawngtlai,Deputy Commissioner,dc-lawngtlai@mizoram.gov.in,03836-222360
+391,Mizoram,Lunglei,Deputy Commissioner,dc-lunglei@mizoram.gov.in,03821-234388
+392,Mizoram,Mamit,Deputy Commissioner,dc-mamit@mizoram.gov.in,03836-222360
+393,Mizoram,Saitual,Deputy Commissioner,dc-saitual@mizoram.gov.in,
+394,Mizoram,Serchhip,Deputy Commissioner,dc-serchhip@mizoram.gov.in,03825-222288
+395,Nagaland,Dimapur,Deputy Commissioner,dc-dimapur@nagaland.gov.in,03862-226237
+396,Nagaland,Kiphire,Deputy Commissioner,dc-kiphire@nagaland.gov.in,
+397,Nagaland,Kohima,Deputy Commissioner,dc-kohima@nagaland.gov.in,0370-2290010
+398,Nagaland,Longleng,Deputy Commissioner,dc-longleng@nagaland.gov.in,
+399,Nagaland,Mokokchung,Deputy Commissioner,dc-mokokchung@nagaland.gov.in,03694-222048
+400,Nagaland,Mon,Deputy Commissioner,dc-mon@nagaland.gov.in,03869-222022
+401,Nagaland,Noklak,Deputy Commissioner,dc-noklak@nagaland.gov.in,
+402,Nagaland,Peren,Deputy Commissioner,dc-peren@nagaland.gov.in,
+403,Nagaland,Phek,Deputy Commissioner,dc-phek@nagaland.gov.in,03685-222348
+404,Nagaland,Tuensang,Deputy Commissioner,dc-tuensang@nagaland.gov.in,03867-220233
+405,Nagaland,Wokha,Deputy Commissioner,dc-wokha@nagaland.gov.in,03693-220133
+406,Nagaland,Zunheboto,Deputy Commissioner,dc-zunheboto@nagaland.gov.in,03686-220107
+407,Odisha,Angul,Collector & DM,collectangul@gmail.com,06764-230900
+408,Odisha,Balangir,Collector & DM,collectbalangir@gmail.com,06652-230900
+409,Odisha,Balasore,Collector & DM,collectbalasore@gmail.com,06782-262900
+410,Odisha,Bargarh,Collector & DM,collectbargarh@gmail.com,06646-230900
+411,Odisha,Bhadrak,Collector & DM,collectbhadrak@gmail.com,06784-251900
+412,Odisha,Boudh,Collector & DM,collectboudh@gmail.com,06842-252900
+413,Odisha,Cuttack,Collector & DM,collectcuttack@gmail.com,0671-2508900
+414,Odisha,Debagarh,Collector & DM,collectdebagarh@gmail.com,06641-230900
+415,Odisha,Dhenkanal,Collector & DM,collectdhenkanal@gmail.com,06762-225900
+416,Odisha,Gajapati,Collector & DM,collectgajapati@gmail.com,06815-222900
+417,Odisha,Ganjam,Collector & DM,collectganjam@gmail.com,0680-2202900
+418,Odisha,Jagatsinghpur,Collector & DM,collectjagatsinghpur@gmail.com,06724-220900
+419,Odisha,Jajpur,Collector & DM,collectjajpur@gmail.com,06726-252900
+420,Odisha,Jharsuguda,Collector & DM,collectjharsuguda@gmail.com,06645-271900
+421,Odisha,Kalahandi,Collector & DM,collectkalahandi@gmail.com,06670-230900
+422,Odisha,Kandhamal,Collector & DM,collectkandhamal@gmail.com,06842-253900
+423,Odisha,Kendrapara,Collector & DM,collectkendrapara@gmail.com,06727-232900
+424,Odisha,Kendujhar,Collector & DM,collectkendujhar@gmail.com,06766-255900
+425,Odisha,Khordha,Collector & DM,collectkhordha@gmail.com,0674-2396900
+426,Odisha,Koraput,Collector & DM,collectkoraput@gmail.com,06852-252900
+427,Odisha,Malkangiri,Collector & DM,collectmalkangiri@gmail.com,06861-230900
+428,Odisha,Mayurbhanj,Collector & DM,collectmayurbhanj@gmail.com,06792-252900
+429,Odisha,Nabarangapur,Collector & DM,collectnabarangapur@gmail.com,06858-222900
+430,Odisha,Nayagarh,Collector & DM,collectnayagarh@gmail.com,06753-252900
+431,Odisha,Nuapada,Collector & DM,collectnuapada@gmail.com,06678-222900
+432,Odisha,Puri,Collector & DM,collectpuri@gmail.com,06752-222900
+433,Odisha,Rayagada,Collector & DM,collectrayagada@gmail.com,06856-222900
+434,Odisha,Sambalpur,Collector & DM,collectsambalpur@gmail.com,0663-2521900
+435,Odisha,Subarnapur,Collector & DM,collectsubarnapur@gmail.com,06653-220900
+436,Odisha,Sundargarh,Collector & DM,collectsundargarh@gmail.com,06622-272900
+437,Punjab,Amritsar,Deputy Commissioner,dc.amritsar@punjab.gov.in,0183-2503001
+438,Punjab,Barnala,Deputy Commissioner,dc.barnala@punjab.gov.in,01679-260001
+439,Punjab,Bathinda,Deputy Commissioner,dc.bathinda@punjab.gov.in,0164-2219001
+440,Punjab,Faridkot,Deputy Commissioner,dc.faridkot@punjab.gov.in,01639-251001
+441,Punjab,Fatehgarh Sahib,Deputy Commissioner,dc.fatehgarhsahib@punjab.gov.in,01763-502001
+442,Punjab,Fazilka,Deputy Commissioner,dc.fazilka@punjab.gov.in,01638-261001
+443,Punjab,Ferozepur,Deputy Commissioner,dc.ferozepur@punjab.gov.in,01632-243001
+444,Punjab,Gurdaspur,Deputy Commissioner,dc.gurdaspur@punjab.gov.in,01874-242001
+445,Punjab,Hoshiarpur,Deputy Commissioner,dc.hoshiarpur@punjab.gov.in,01882-220001
+446,Punjab,Jalandhar,Deputy Commissioner,dc.jalandhar@punjab.gov.in,0181-2222001
+447,Punjab,Kapurthala,Deputy Commissioner,dc.kapurthala@punjab.gov.in,01822-232001
+448,Punjab,Ludhiana,Deputy Commissioner,dc.ludhiana@punjab.gov.in,0161-2444001
+449,Punjab,Mansa,Deputy Commissioner,dc.mansa@punjab.gov.in,01652-252001
+450,Punjab,Moga,Deputy Commissioner,dc.moga@punjab.gov.in,01636-233001
+451,Punjab,Mohali (SAS Nagar),Deputy Commissioner,dc.mohali@punjab.gov.in,0172-2220001
+452,Punjab,Muktsar,Deputy Commissioner,dc.muktsar@punjab.gov.in,01633-262001
+453,Punjab,Nawanshahr,Deputy Commissioner,dc.nawanshahr@punjab.gov.in,01823-220001
+454,Punjab,Pathankot,Deputy Commissioner,dc.pathankot@punjab.gov.in,0186-2245001
+455,Punjab,Patiala,Deputy Commissioner,dc.patiala@punjab.gov.in,0175-2212001
+456,Punjab,Rupnagar,Deputy Commissioner,dc.rupnagar@punjab.gov.in,01881-220001
+457,Punjab,Sangrur,Deputy Commissioner,dc.sangrur@punjab.gov.in,01672-232001
+458,Punjab,Shaheed Bhagat Singh Nagar,Deputy Commissioner,dc.sbsnagar@punjab.gov.in,
+459,Punjab,Tarn Taran,Deputy Commissioner,dc.tarntaran@punjab.gov.in,01852-223001
+460,Rajasthan,Ajmer,Collector & DM,dmajmer@rajasthan.gov.in,0145-2626106
+461,Rajasthan,Alwar,Collector & DM,dmalwar@rajasthan.gov.in,0144-2700311
+462,Rajasthan,Banswara,Collector & DM,dmbanswara@rajasthan.gov.in,02962-240224
+463,Rajasthan,Baran,Collector & DM,dmbaran@rajasthan.gov.in,07453-230220
+464,Rajasthan,Barmer,Collector & DM,dmbarmer@rajasthan.gov.in,02982-220126
+465,Rajasthan,Bharatpur,Collector & DM,dmbharatpur@rajasthan.gov.in,05644-222222
+466,Rajasthan,Bhilwara,Collector & DM,dmbhilwara@rajasthan.gov.in,01482-231510
+467,Rajasthan,Bikaner,Collector & DM,dmbikaner@rajasthan.gov.in,0151-2544100
+468,Rajasthan,Bundi,Collector & DM,dmbundi@rajasthan.gov.in,0747-2443034
+469,Rajasthan,Chittorgarh,Collector & DM,dmchittorgarh@rajasthan.gov.in,01472-240105
+470,Rajasthan,Churu,Collector & DM,dmchuru@rajasthan.gov.in,01562-250222
+471,Rajasthan,Dausa,Collector & DM,dmdausa@rajasthan.gov.in,01427-223500
+472,Rajasthan,Dholpur,Collector & DM,dmdholpur@rajasthan.gov.in,05642-223100
+473,Rajasthan,Dungarpur,Collector & DM,dmdungarpur@rajasthan.gov.in,02964-230123
+474,Rajasthan,Hanumangarh,Collector & DM,dmhanumangarh@rajasthan.gov.in,01552-264028
+475,Rajasthan,Jaipur,Collector & DM,dmjaipur@rajasthan.gov.in,0141-2385555
+476,Rajasthan,Jaisalmer,Collector & DM,dmjaisalmer@rajasthan.gov.in,02992-252224
+477,Rajasthan,Jalor,Collector & DM,dmjalor@rajasthan.gov.in,02973-220055
+478,Rajasthan,Jhalawar,Collector & DM,dmjhalawar@rajasthan.gov.in,07432-232288
+479,Rajasthan,Jhunjhunu,Collector & DM,dmjhunjhunu@rajasthan.gov.in,01592-232233
+480,Rajasthan,Jodhpur,Collector & DM,dmjodhpur@rajasthan.gov.in,0291-2440800
+481,Rajasthan,Karauli,Collector & DM,dmkarauli@rajasthan.gov.in,07464-220134
+482,Rajasthan,Kota,Collector & DM,dmkota@rajasthan.gov.in,0744-2500600
+483,Rajasthan,Nagaur,Collector & DM,dmnagaur@rajasthan.gov.in,01582-245555
+484,Rajasthan,Pali,Collector & DM,dmpali@rajasthan.gov.in,02932-220110
+485,Rajasthan,Pratapgarh,Collector & DM,dmpratapgarh@rajasthan.gov.in,
+486,Rajasthan,Rajsamand,Collector & DM,dmrajsamand@rajasthan.gov.in,02952-221114
+487,Rajasthan,Sawai Madhopur,Collector & DM,dmsawaimadhopur@rajasthan.gov.in,07462-220020
+488,Rajasthan,Sikar,Collector & DM,dmsikar@rajasthan.gov.in,01572-270500
+489,Rajasthan,Sirohi,Collector & DM,dmsirohi@rajasthan.gov.in,02972-220117
+490,Rajasthan,Sri Ganganagar,Collector & DM,dmsriganganagar@rajasthan.gov.in,0154-2470002
+491,Rajasthan,Tonk,Collector & DM,dmtonk@rajasthan.gov.in,01432-245525
+492,Rajasthan,Udaipur,Collector & DM,dmudaipur@rajasthan.gov.in,0294-2428510
+493,Sikkim,East Sikkim,District Collector,dc-eastdistrict@sikkim.gov.in,03592-231316
+494,Sikkim,North Sikkim,District Collector,dc-northdistrict@sikkim.gov.in,03592-234405
+495,Sikkim,South Sikkim,District Collector,dc-southdistrict@sikkim.gov.in,03595-220355
+496,Sikkim,West Sikkim,District Collector,dc-westdistrict@sikkim.gov.in,03595-250355
+497,Tamil Nadu,Ariyalur,Collector,collector.ariyalur@tn.gov.in,04329-220200
+498,Tamil Nadu,Chengalpattu,Collector,collector.chengalpattu@tn.gov.in,044-27426600
+499,Tamil Nadu,Chennai,Collector,collector.chennai@tn.gov.in,044-25384796
+500,Tamil Nadu,Coimbatore,Collector,collector.coimbatore@tn.gov.in,0422-2390006
+501,Tamil Nadu,Cuddalore,Collector,collector.cuddalore@tn.gov.in,04142-221192
+502,Tamil Nadu,Dharmapuri,Collector,collector.dharmapuri@tn.gov.in,04342-265001
+503,Tamil Nadu,Dindigul,Collector,collector.dindigul@tn.gov.in,0451-2431400
+504,Tamil Nadu,Erode,Collector,collector.erode@tn.gov.in,0424-2257222
+505,Tamil Nadu,Kallakurichi,Collector,collector.kallakurichi@tn.gov.in,04151-222202
+506,Tamil Nadu,Kanchipuram,Collector,collector.kanchipuram@tn.gov.in,044-27222434
+507,Tamil Nadu,Kanyakumari,Collector,collector.kanyakumari@tn.gov.in,04652-230201
+508,Tamil Nadu,Karur,Collector,collector.karur@tn.gov.in,04324-260007
+509,Tamil Nadu,Krishnagiri,Collector,collector.krishnagiri@tn.gov.in,04343-234100
+510,Tamil Nadu,Madurai,Collector,collector.madurai@tn.gov.in,0452-2532584
+511,Tamil Nadu,Mayiladuthurai,Collector,collector.mayiladuthurai@tn.gov.in,04364-225200
+512,Tamil Nadu,Nagapattinam,Collector,collector.nagapattinam@tn.gov.in,04365-242422
+513,Tamil Nadu,Namakkal,Collector,collector.namakkal@tn.gov.in,04286-261000
+514,Tamil Nadu,Nilgiris,Collector,collector.nilgiris@tn.gov.in,0423-2444200
+515,Tamil Nadu,Perambalur,Collector,collector.perambalur@tn.gov.in,04328-221000
+516,Tamil Nadu,Pudukkottai,Collector,collector.pudukkottai@tn.gov.in,04322-221111
+517,Tamil Nadu,Ramanathapuram,Collector,collector.ramanathapuram@tn.gov.in,04567-235601
+518,Tamil Nadu,Ranipet,Collector,collector.ranipet@tn.gov.in,04172-255200
+519,Tamil Nadu,Salem,Collector,collector.salem@tn.gov.in,0427-2411111
+520,Tamil Nadu,Sivaganga,Collector,collector.sivaganga@tn.gov.in,04575-241111
+521,Tamil Nadu,Tenkasi,Collector,collector.tenkasi@tn.gov.in,04633-282200
+522,Tamil Nadu,Thanjavur,Collector,collector.thanjavur@tn.gov.in,04362-270101
+523,Tamil Nadu,Theni,Collector,collector.theni@tn.gov.in,04546-252800
+524,Tamil Nadu,Thoothukudi,Collector,collector.thoothukudi@tn.gov.in,0461-2382601
+525,Tamil Nadu,Tiruchirappalli,Collector,collector.tiruchirappalli@tn.gov.in,0431-2700899
+526,Tamil Nadu,Tirunelveli,Collector,collector.tirunelveli@tn.gov.in,0462-2501530
+527,Tamil Nadu,Tirupathur,Collector,collector.tirupathur@tn.gov.in,04179-221001
+528,Tamil Nadu,Tiruppur,Collector,collector.tiruppur@tn.gov.in,0421-2220101
+529,Tamil Nadu,Tiruvallur,Collector,collector.tiruvallur@tn.gov.in,044-27667236
+530,Tamil Nadu,Tiruvannamalai,Collector,collector.tiruvannamalai@tn.gov.in,04175-233401
+531,Tamil Nadu,Tiruvarur,Collector,collector.tiruvarur@tn.gov.in,04366-222501
+532,Tamil Nadu,Vellore,Collector,collector.vellore@tn.gov.in,0416-2220005
+533,Tamil Nadu,Viluppuram,Collector,collector.viluppuram@tn.gov.in,04146-234023
+534,Tamil Nadu,Virudhunagar,Collector,collector.virudhunagar@tn.gov.in,04562-255555
+535,Telangana,Adilabad,Collector,collector.adilabad@telangana.gov.in,08732-224888
+536,Telangana,Bhadradri Kothagudem,Collector,collector.bhadradri@telangana.gov.in,08744-242444
+537,Telangana,Hanamkonda,Collector,collector.hanamkonda@telangana.gov.in,0870-2442555
+538,Telangana,Hyderabad,Collector,collector.hyderabad@telangana.gov.in,040-23220800
+539,Telangana,Jagtial,Collector,collector.jagtial@telangana.gov.in,08724-241444
+540,Telangana,Jangaon,Collector,collector.jangaon@telangana.gov.in,08713-220555
+541,Telangana,Jayashankar Bhupalpally,Collector,collector.jayashankar@telangana.gov.in,08716-251555
+542,Telangana,Jogulamba Gadwal,Collector,collector.gadwal@telangana.gov.in,08545-274555
+543,Telangana,Kamareddy,Collector,collector.kamareddy@telangana.gov.in,08468-222555
+544,Telangana,Karimnagar,Collector,collector.karimnagar@telangana.gov.in,0878-2232555
+545,Telangana,Khammam,Collector,collector.khammam@telangana.gov.in,08742-222555
+546,Telangana,Komaram Bheem Asifabad,Collector,collector.asifabad@telangana.gov.in,08734-220555
+547,Telangana,Mahabubabad,Collector,collector.mahabubabad@telangana.gov.in,08719-222555
+548,Telangana,Mahabubnagar,Collector,collector.mahabubnagar@telangana.gov.in,08542-241555
+549,Telangana,Mancherial,Collector,collector.mancherial@telangana.gov.in,08736-244555
+550,Telangana,Medak,Collector,collector.medak@telangana.gov.in,08452-242555
+551,Telangana,Medchal-Malkajgiri,Collector,collector.medchal@telangana.gov.in,040-27209555
+552,Telangana,Mulugu,Collector,collector.mulugu@telangana.gov.in,
+553,Telangana,Nagarkurnool,Collector,collector.nagarkurnool@telangana.gov.in,08548-242555
+554,Telangana,Nalgonda,Collector,collector.nalgonda@telangana.gov.in,08682-242555
+555,Telangana,Narayanpet,Collector,collector.narayanpet@telangana.gov.in,
+556,Telangana,Nirmal,Collector,collector.nirmal@telangana.gov.in,08734-221555
+557,Telangana,Nizamabad,Collector,collector.nizamabad@telangana.gov.in,08462-235555
+558,Telangana,Peddapalli,Collector,collector.peddapalli@telangana.gov.in,08728-244555
+559,Telangana,Rajanna Sircilla,Collector,collector.sircilla@telangana.gov.in,08725-231555
+560,Telangana,Rangareddy,Collector,collector.rangareddy@telangana.gov.in,040-24222555
+561,Telangana,Sangareddy,Collector,collector.sangareddy@telangana.gov.in,08455-272555
+562,Telangana,Siddipet,Collector,collector.siddipet@telangana.gov.in,08457-222555
+563,Telangana,Suryapet,Collector,collector.suryapet@telangana.gov.in,08684-222555
+564,Telangana,Vikarabad,Collector,collector.vikarabad@telangana.gov.in,08411-222555
+565,Telangana,Wanaparthy,Collector,collector.wanaparthy@telangana.gov.in,08543-243555
+566,Telangana,Warangal Rural,Collector,collector.warangalrural@telangana.gov.in,0870-2571555
+567,Telangana,Yadadri Bhuvanagiri,Collector,collector.yadadri@telangana.gov.in,08683-241555
+568,Tripura,Dhalai,District Magistrate,dm-dhalai@tripura.gov.in,03822-222299
+569,Tripura,Gomati,District Magistrate,dm-gomati@tripura.gov.in,03823-222206
+570,Tripura,Khowai,District Magistrate,dm-khowai@tripura.gov.in,03824-222230
+571,Tripura,North Tripura,District Magistrate,dm-northtripura@tripura.gov.in,03821-222299
+572,Tripura,Sepahijala,District Magistrate,dm-sepahijala@tripura.gov.in,0381-2324002
+573,Tripura,South Tripura,District Magistrate,dm-southtripura@tripura.gov.in,03825-222299
+574,Tripura,Unakoti,District Magistrate,dm-unakoti@tripura.gov.in,03821-224027
+575,Tripura,West Tripura,District Magistrate,dm-westtripura@tripura.gov.in,0381-2415601
+576,Uttar Pradesh,Agra,District Magistrate,dm-agra@up.nic.in,0562-2857100
+577,Uttar Pradesh,Aligarh,District Magistrate,dm-aligarh@up.nic.in,0571-2700300
+578,Uttar Pradesh,Allahabad (Prayagraj),District Magistrate,dm-allahabad@up.nic.in,0532-2623000
+579,Uttar Pradesh,Ambedkar Nagar,District Magistrate,dm-ambedkarnagar@up.nic.in,05271-222200
+580,Uttar Pradesh,Amethi,District Magistrate,dm-amethi@up.nic.in,05368-222200
+581,Uttar Pradesh,Amroha,District Magistrate,dm-amroha@up.nic.in,05922-274100
+582,Uttar Pradesh,Auraiya,District Magistrate,dm-auraiya@up.nic.in,05683-243100
+583,Uttar Pradesh,Ayodhya,District Magistrate,dm-ayodhya@up.nic.in,05278-232200
+584,Uttar Pradesh,Azamgarh,District Magistrate,dm-azamgarh@up.nic.in,05462-220900
+585,Uttar Pradesh,Baghpat,District Magistrate,dm-baghpat@up.nic.in,01232-244100
+586,Uttar Pradesh,Bahraich,District Magistrate,dm-bahraich@up.nic.in,05252-232300
+587,Uttar Pradesh,Ballia,District Magistrate,dm-ballia@up.nic.in,05498-222600
+588,Uttar Pradesh,Balrampur,District Magistrate,dm-balrampur@up.nic.in,05263-232300
+589,Uttar Pradesh,Banda,District Magistrate,dm-banda@up.nic.in,05192-223100
+590,Uttar Pradesh,Barabanki,District Magistrate,dm-barabanki@up.nic.in,05248-227700
+591,Uttar Pradesh,Bareilly,District Magistrate,dm-bareilly@up.nic.in,0581-2420100
+592,Uttar Pradesh,Basti,District Magistrate,dm-basti@up.nic.in,05542-245600
+593,Uttar Pradesh,Bhadohi,District Magistrate,dm-bhadohi@up.nic.in,05414-232200
+594,Uttar Pradesh,Bijnor,District Magistrate,dm-bijnor@up.nic.in,01342-262200
+595,Uttar Pradesh,Budaun,District Magistrate,dm-budaun@up.nic.in,05832-255100
+596,Uttar Pradesh,Bulandshahr,District Magistrate,dm-bulandshahr@up.nic.in,05732-222400
+597,Uttar Pradesh,Chandauli,District Magistrate,dm-chandauli@up.nic.in,05412-285200
+598,Uttar Pradesh,Chitrakoot,District Magistrate,dm-chitrakoot@up.nic.in,05198-252200
+599,Uttar Pradesh,Deoria,District Magistrate,dm-deoria@up.nic.in,05568-222600
+600,Uttar Pradesh,Etah,District Magistrate,dm-etah@up.nic.in,05742-255400
+601,Uttar Pradesh,Etawah,District Magistrate,dm-etawah@up.nic.in,05688-255100
+602,Uttar Pradesh,Farrukhabad,District Magistrate,dm-farrukhabad@up.nic.in,05692-245100
+603,Uttar Pradesh,Fatehpur,District Magistrate,dm-fatehpur@up.nic.in,05180-222100
+604,Uttar Pradesh,Firozabad,District Magistrate,dm-firozabad@up.nic.in,05612-253100
+605,Uttar Pradesh,Gautam Buddha Nagar,District Magistrate,dm-gbnagar@up.nic.in,0120-2511700
+606,Uttar Pradesh,Ghaziabad,District Magistrate,dm-ghaziabad@up.nic.in,0120-2820200
+607,Uttar Pradesh,Ghazipur,District Magistrate,dm-ghazipur@up.nic.in,0548-2220500
+608,Uttar Pradesh,Gonda,District Magistrate,dm-gonda@up.nic.in,05262-234100
+609,Uttar Pradesh,Gorakhpur,District Magistrate,dm-gorakhpur@up.nic.in,0551-2200200
+610,Uttar Pradesh,Hamirpur,District Magistrate,dm-hamirpur@up.nic.in,05282-234100
+611,Uttar Pradesh,Hapur,District Magistrate,dm-hapur@up.nic.in,0122-2309100
+612,Uttar Pradesh,Hardoi,District Magistrate,dm-hardoi@up.nic.in,05852-233500
+613,Uttar Pradesh,Hathras,District Magistrate,dm-hathras@up.nic.in,05722-263600
+614,Uttar Pradesh,Jalaun,District Magistrate,dm-jalaun@up.nic.in,05162-253400
+615,Uttar Pradesh,Jaunpur,District Magistrate,dm-jaunpur@up.nic.in,05452-263500
+616,Uttar Pradesh,Jhansi,District Magistrate,dm-jhansi@up.nic.in,0510-2442100
+617,Uttar Pradesh,Kannauj,District Magistrate,dm-kannauj@up.nic.in,05694-232100
+618,Uttar Pradesh,Kanpur Dehat,District Magistrate,dm-kanpurdehat@up.nic.in,05111-271800
+619,Uttar Pradesh,Kanpur Nagar,District Magistrate,dm-kanpurnagar@up.nic.in,0512-2304100
+620,Uttar Pradesh,Kasganj,District Magistrate,dm-kasganj@up.nic.in,05744-242100
+621,Uttar Pradesh,Kaushambi,District Magistrate,dm-kaushambi@up.nic.in,05331-242100
+622,Uttar Pradesh,Kushinagar,District Magistrate,dm-kushinagar@up.nic.in,05564-241100
+623,Uttar Pradesh,Lakhimpur Kheri,District Magistrate,dm-lakhimpurkheri@up.nic.in,05872-252500
+624,Uttar Pradesh,Lalitpur,District Magistrate,dm-lalitpur@up.nic.in,05176-252100
+625,Uttar Pradesh,Lucknow,District Magistrate,dm-lucknow@up.nic.in,0522-2237755
+626,Uttar Pradesh,Maharajganj,District Magistrate,dm-maharajganj@up.nic.in,05523-222200
+627,Uttar Pradesh,Mahoba,District Magistrate,dm-mahoba@up.nic.in,05281-252100
+628,Uttar Pradesh,Mainpuri,District Magistrate,dm-mainpuri@up.nic.in,05672-265100
+629,Uttar Pradesh,Mathura,District Magistrate,dm-mathura@up.nic.in,0565-2402200
+630,Uttar Pradesh,Mau,District Magistrate,dm-mau@up.nic.in,0547-2220600
+631,Uttar Pradesh,Meerut,District Magistrate,dm-meerut@up.nic.in,0121-2604100
+632,Uttar Pradesh,Mirzapur,District Magistrate,dm-mirzapur@up.nic.in,05442-250500
+633,Uttar Pradesh,Moradabad,District Magistrate,dm-moradabad@up.nic.in,0591-2490100
+634,Uttar Pradesh,Muzaffarnagar,District Magistrate,dm-muzaffarnagar@up.nic.in,0131-2440100
+635,Uttar Pradesh,Pilibhit,District Magistrate,dm-pilibhit@up.nic.in,05882-252400
+636,Uttar Pradesh,Pratapgarh,District Magistrate,dm-pratapgarh@up.nic.in,05342-243100
+637,Uttar Pradesh,Raebareli,District Magistrate,dm-raebareli@up.nic.in,0535-2202500
+638,Uttar Pradesh,Rampur,District Magistrate,dm-rampur@up.nic.in,0595-2350100
+639,Uttar Pradesh,Saharanpur,District Magistrate,dm-saharanpur@up.nic.in,0132-2720100
+640,Uttar Pradesh,Sambhal,District Magistrate,dm-sambhal@up.nic.in,05923-245100
+641,Uttar Pradesh,Sant Kabir Nagar,District Magistrate,dm-santkabir@up.nic.in,05547-222100
+642,Uttar Pradesh,Shahjahanpur,District Magistrate,dm-shahjahanpur@up.nic.in,05842-222200
+643,Uttar Pradesh,Shamli,District Magistrate,dm-shamli@up.nic.in,01398-220100
+644,Uttar Pradesh,Shravasti,District Magistrate,dm-shravasti@up.nic.in,05252-264100
+645,Uttar Pradesh,Siddharth Nagar,District Magistrate,dm-siddharthnagar@up.nic.in,05544-222800
+646,Uttar Pradesh,Sitapur,District Magistrate,dm-sitapur@up.nic.in,05862-241100
+647,Uttar Pradesh,Sonbhadra,District Magistrate,dm-sonbhadra@up.nic.in,05444-222100
+648,Uttar Pradesh,Sultanpur,District Magistrate,dm-sultanpur@up.nic.in,05362-241100
+649,Uttar Pradesh,Unnao,District Magistrate,dm-unnao@up.nic.in,0515-2810700
+650,Uttar Pradesh,Varanasi,District Magistrate,dm-varanasi@up.nic.in,0542-2506800
+651,Uttarakhand,Almora,District Magistrate,dm-almora@uk.gov.in,05962-230506
+652,Uttarakhand,Bageshwar,District Magistrate,dm-bageshwar@uk.gov.in,05963-220303
+653,Uttarakhand,Chamoli,District Magistrate,dm-chamoli@uk.gov.in,01372-252116
+654,Uttarakhand,Champawat,District Magistrate,dm-champawat@uk.gov.in,05965-230504
+655,Uttarakhand,Dehradun,District Magistrate,dm-dehradun@uk.gov.in,0135-2714006
+656,Uttarakhand,Haridwar,District Magistrate,dm-haridwar@uk.gov.in,01334-263011
+657,Uttarakhand,Nainital,District Magistrate,dm-nainital@uk.gov.in,05942-236526
+658,Uttarakhand,Pauri Garhwal,District Magistrate,dm-paurigarhwal@uk.gov.in,01368-222208
+659,Uttarakhand,Pithoragarh,District Magistrate,dm-pithoragarh@uk.gov.in,05964-225258
+660,Uttarakhand,Rudraprayag,District Magistrate,dm-rudraprayag@uk.gov.in,01364-233028
+661,Uttarakhand,Tehri Garhwal,District Magistrate,dm-tehrigarhwal@uk.gov.in,01376-232500
+662,Uttarakhand,Udham Singh Nagar,District Magistrate,dm-udhamsinghnagar@uk.gov.in,05944-250066
+663,Uttarakhand,Uttarkashi,District Magistrate,dm-uttarkashi@uk.gov.in,01374-222221
+664,West Bengal,Alipurduar,District Magistrate,dm-alipurduar@wb.gov.in,03564-255555
+665,West Bengal,Bankura,District Magistrate,dm-bankura@wb.gov.in,03242-255555
+666,West Bengal,Birbhum,District Magistrate,dm-birbhum@wb.gov.in,03462-255555
+667,West Bengal,Cooch Behar,District Magistrate,dm-coochbehar@wb.gov.in,03582-227900
+668,West Bengal,Dakshin Dinajpur,District Magistrate,dm-dakshindinajpur@wb.gov.in,03522-255555
+669,West Bengal,Darjeeling,District Magistrate,dm-darjeeling@wb.gov.in,0354-2255555
+670,West Bengal,Hooghly,District Magistrate,dm-hooghly@wb.gov.in,033-26803709
+671,West Bengal,Howrah,District Magistrate,dm-howrah@wb.gov.in,033-26381900
+672,West Bengal,Jalpaiguri,District Magistrate,dm-jalpaiguri@wb.gov.in,03561-225555
+673,West Bengal,Jhargram,District Magistrate,dm-jhargram@wb.gov.in,03221-255555
+674,West Bengal,Kalimpong,District Magistrate,dm-kalimpong@wb.gov.in,03552-255555
+675,West Bengal,Kolkata,District Magistrate,dm-kolkata@wb.gov.in,033-22143526
+676,West Bengal,Malda,District Magistrate,dm-malda@wb.gov.in,03512-255555
+677,West Bengal,Murshidabad,District Magistrate,dm-murshidabad@wb.gov.in,03482-255555
+678,West Bengal,Nadia,District Magistrate,dm-nadia@wb.gov.in,03472-255555
+679,West Bengal,North 24 Parganas,District Magistrate,dm-north24pgs@wb.gov.in,033-25921234
+680,West Bengal,Paschim Bardhaman,District Magistrate,dm-paschimbardhaman@wb.gov.in,0342-2677500
+681,West Bengal,Paschim Medinipur,District Magistrate,dm-paschimmedinipur@wb.gov.in,03222-255555
+682,West Bengal,Purba Bardhaman,District Magistrate,dm-purbabardhaman@wb.gov.in,0342-2671190
+683,West Bengal,Purba Medinipur,District Magistrate,dm-purbamedinipur@wb.gov.in,03228-255555
+684,West Bengal,Purulia,District Magistrate,dm-purulia@wb.gov.in,03252-255555
+685,West Bengal,South 24 Parganas,District Magistrate,dm-south24pgs@wb.gov.in,033-24011150
+686,West Bengal,Uttar Dinajpur,District Magistrate,dm-uttardinajpur@wb.gov.in,03523-255555
+687,Chandigarh,Chandigarh,Deputy Commissioner,dc.chd@gov.in,0172-2740198
+688,Delhi,Central Delhi,District Magistrate,dm-central@delhi.gov.in,011-23237983
+689,Delhi,East Delhi,District Magistrate,dm-east@delhi.gov.in,011-22625103
+690,Delhi,New Delhi,District Magistrate,dm-newdelhi@delhi.gov.in,011-23386405
+691,Delhi,North Delhi,District Magistrate,dm-north@delhi.gov.in,011-27650215
+692,Delhi,North East Delhi,District Magistrate,dm-northeast@delhi.gov.in,011-22829808
+693,Delhi,North West Delhi,District Magistrate,dm-northwest@delhi.gov.in,011-27562264
+694,Delhi,Shahdara,District Magistrate,dm-shahdara@delhi.gov.in,011-22851786
+695,Delhi,South Delhi,District Magistrate,dm-south@delhi.gov.in,011-29561200
+696,Delhi,South East Delhi,District Magistrate,dm-southeast@delhi.gov.in,011-26326010
+697,Delhi,South West Delhi,District Magistrate,dm-southwest@delhi.gov.in,011-25502100
+698,Delhi,West Delhi,District Magistrate,dm-west@delhi.gov.in,011-25467783
+699,Jammu & Kashmir,Anantnag,District Magistrate,dm-anantnag@jk.gov.in,01932-222333
+700,Jammu & Kashmir,Bandipora,District Magistrate,dm-bandipora@jk.gov.in,01957-225283
+701,Jammu & Kashmir,Baramulla,District Magistrate,dm-baramulla@jk.gov.in,01952-234733
+702,Jammu & Kashmir,Budgam,District Magistrate,dm-budgam@jk.gov.in,01951-257000
+703,Jammu & Kashmir,Doda,District Magistrate,dm-doda@jk.gov.in,01996-232133
+704,Jammu & Kashmir,Ganderbal,District Magistrate,dm-ganderbal@jk.gov.in,0194-2470202
+705,Jammu & Kashmir,Jammu,District Magistrate,dm-jammu@jk.gov.in,0191-2543200
+706,Jammu & Kashmir,Kathua,District Magistrate,dm-kathua@jk.gov.in,01922-232433
+707,Jammu & Kashmir,Kishtwar,District Magistrate,dm-kishtwar@jk.gov.in,01995-262052
+708,Jammu & Kashmir,Kulgam,District Magistrate,dm-kulgam@jk.gov.in,01931-260350
+709,Jammu & Kashmir,Kupwara,District Magistrate,dm-kupwara@jk.gov.in,01955-262043
+710,Jammu & Kashmir,Poonch,District Magistrate,dm-poonch@jk.gov.in,01965-220333
+711,Jammu & Kashmir,Pulwama,District Magistrate,dm-pulwama@jk.gov.in,01933-241200
+712,Jammu & Kashmir,Rajouri,District Magistrate,dm-rajouri@jk.gov.in,01962-263633
+713,Jammu & Kashmir,Ramban,District Magistrate,dm-ramban@jk.gov.in,01998-266201
+714,Jammu & Kashmir,Reasi,District Magistrate,dm-reasi@jk.gov.in,01991-261310
+715,Jammu & Kashmir,Samba,District Magistrate,dm-samba@jk.gov.in,01923-244201
+716,Jammu & Kashmir,Shopian,District Magistrate,dm-shopian@jk.gov.in,01933-263900
+717,Jammu & Kashmir,Srinagar,District Magistrate,dm-srinagar@jk.gov.in,0194-2482333
+718,Jammu & Kashmir,Udhampur,District Magistrate,dm-udhampur@jk.gov.in,01992-270133
+719,Ladakh,Kargil,District Collector,dc-kargil@ladakh.gov.in,01985-232102
+720,Ladakh,Leh,District Collector,dc-leh@ladakh.gov.in,01982-252022
+721,Lakshadweep,Lakshadweep,Collector,collector-lakshadweep@nic.in,04896-262012
+722,Puducherry,Karaikal,Collector,collector.karaikal@py.gov.in,04368-220228
+723,Puducherry,Mahe,Collector,collector.mahe@py.gov.in,0490-2332250
+724,Puducherry,Puducherry,Collector,collector.pondicherry@py.gov.in,0413-2253333
+725,Puducherry,Yanam,Collector,collector.yanam@py.gov.in,0884-2322333
