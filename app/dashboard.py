@@ -220,7 +220,7 @@ st.subheader("Rainfall Forecast")
 
 rain_series = merged_df["Rainfall_mm"]
 
-rain_model = ARIMA(rain_series, order=(2,1,2))
+rain_model = ARIMA(rain_series, order=(1,1,1))
 rain_fit = rain_model.fit()
 rain_forecast = rain_fit.forecast(steps=forecast_months)
 
