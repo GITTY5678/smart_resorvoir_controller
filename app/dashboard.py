@@ -10,25 +10,40 @@ import os
 
 from statsmodels.tsa.arima.model import ARIMA
 from scipy.optimize import minimize
+from dotenv import load_dotenv
+from openai import OpenAI
+
+# -------------------------------------------------
+# LOAD ENV + LLM CLIENT
+# -------------------------------------------------
+
+load_dotenv()
+
+client = OpenAI(
+    base_url="https://api.featherless.ai/v1",
+    api_key=os.getenv("FEATHERLESS_API_KEY"),
+)
 
 # -------------------------------------------------
 # PAGE CONFIG
 # -------------------------------------------------
 
 st.set_page_config(
-    page_title="AQUA NEXUS - Dynamic Reservoir Optimization",
+    page_title="AQUA NEXUS - Intelligent Reservoir System",
     layout="wide"
 )
 
 st.title("AQUA NEXUS")
-st.subheader("Rainfall Forecast + Dynamic Reservoir Optimization")
+st.subheader("Rainfall Forecast + Dynamic Optimization + AI Intelligence")
 
 # -------------------------------------------------
 # LOAD DATA
 # -------------------------------------------------
 
-RES_PATH = os.path.join("data", "cwc_reservoirs.xlsx")
-RAIN_PATH = os.path.join("data", "climate.xlsx")
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+RES_PATH = os.path.join(BASE_DIR, "data", "cwc_reservoirs.xlsx")
+RAIN_PATH = os.path.join(BASE_DIR, "data", "climate.xlsx")
 
 if not os.path.exists(RES_PATH):
     st.error("Reservoir dataset not found.")
@@ -139,10 +154,6 @@ monthly_storage = res_df.groupby(
     ["Year", "Month", "REGION"]
 )["CURRENT STORAGE BCM"].mean().reset_index()
 
-# -------------------------------------------------
-# CLEAN RAIN DATA SAFELY
-# -------------------------------------------------
-
 rain_df_clean = rain_df_full.copy()
 
 if "Month" in rain_df_clean.columns and "Month No" in rain_df_clean.columns:
@@ -191,12 +202,11 @@ rain_forecast = rain_fit.forecast(steps=forecast_months)
 st.line_chart(rain_forecast)
 
 # -------------------------------------------------
-# INFLOW SCALING (DATA-DRIVEN)
+# INFLOW SCALING
 # -------------------------------------------------
 
 historical_change = merged_df["CURRENT STORAGE BCM"].diff().abs().mean()
 avg_rain = merged_df["Rainfall_mm"].mean()
-
 inflow_factor = max(historical_change / avg_rain, 0.001)
 
 # -------------------------------------------------
@@ -217,7 +227,6 @@ def dynamic_optimization(current_storage, rainfall_forecast, capacity):
             inflow = rainfall_forecast[t] * inflow_factor
             storage = storage + inflow - releases[t]
 
-            # Hard physical clamp
             storage = max(0, min(storage, capacity))
 
             overflow_penalty = max(0, storage - capacity) ** 2
@@ -249,7 +258,7 @@ optimal_releases = dynamic_optimization(
 )
 
 # -------------------------------------------------
-# SIMULATE STORAGE
+# SIMULATION
 # -------------------------------------------------
 
 storage_sim = []
@@ -268,35 +277,24 @@ for i in range(forecast_months):
 # -------------------------------------------------
 
 fig_opt = go.Figure()
-
 fig_opt.add_trace(go.Scatter(
     y=storage_sim,
     mode="lines+markers",
     name="Optimized Storage",
     line=dict(color="cyan")
 ))
-
 fig_opt.update_layout(template="plotly_dark", height=400)
 st.plotly_chart(fig_opt, width="stretch")
 
 # -------------------------------------------------
-# RELEASE STRATEGY
-# -------------------------------------------------
-
-st.subheader("Optimal Release Strategy")
-
-for i, r in enumerate(optimal_releases):
-    st.write(f"Month {i+1}: Release {r:.2f} BCM")
-
-# -------------------------------------------------
-# RISK + EXPECTATION COMPARISON
+# RISK ASSESSMENT
 # -------------------------------------------------
 
 final_storage = storage_sim[-1]
 forecast_pct = (final_storage / capacity) * 100
 
 st.markdown("---")
-st.subheader("Final Risk Assessment")
+st.subheader("Risk Assessment")
 
 if final_storage >= capacity:
     st.error("Reservoir At Maximum Capacity")
@@ -309,12 +307,56 @@ else:
 
 st.metric("Projected Storage %", f"{forecast_pct:.2f}%")
 
-st.markdown("---")
-st.subheader("Expectation Comparison")
+# -------------------------------------------------
+# AI EXECUTIVE SUMMARY (QWEN)
+# -------------------------------------------------
 
-if final_storage > expected_level:
-    st.warning("Projected level exceeds expected level")
-elif final_storage < expected_level:
-    st.info("Projected level below expected level")
-else:
-    st.success("Projected matches expected level")
+st.markdown("---")
+st.header("AI Executive Summary")
+
+def generate_ai_summary(data_dict):
+
+    prompt = f"""
+    Generate a professional reservoir management summary.
+
+    Reservoir: {data_dict['reservoir']}
+    Current Storage: {data_dict['current_storage']} BCM
+    Capacity: {data_dict['capacity']} BCM
+    Forecast Months: {data_dict['months']}
+    Projected Storage: {data_dict['projected']} BCM
+    Projected %: {data_dict['projected_pct']}%
+    Recommended Average Release: {data_dict['release']} BCM
+    Expected Level: {data_dict['expected']} BCM
+    """
+
+    try:
+        response = client.chat.completions.create(
+            model="Qwen/Qwen2.5-7B-Instruct",
+            messages=[
+                {"role": "system", "content": "You are a reservoir systems analyst."},
+                {"role": "user", "content": prompt}
+            ],
+        )
+
+        return response.model_dump()["choices"][0]["message"]["content"]
+
+    except Exception as e:
+        return f"AI Summary Failed: {str(e)}"
+
+release_avg = float(np.mean(optimal_releases))
+
+data_payload = {
+    "reservoir": selected_reservoir,
+    "current_storage": float(current_storage),
+    "capacity": float(capacity),
+    "months": forecast_months,
+    "projected": float(final_storage),
+    "projected_pct": float(forecast_pct),
+    "release": release_avg,
+    "expected": float(expected_level),
+}
+
+if st.button("Generate AI Summary"):
+    with st.spinner("Generating intelligent analysis..."):
+        summary = generate_ai_summary(data_payload)
+    st.write(summary)
