@@ -1,47 +1,27 @@
 # -------------------------------------------------
 # IMPORTS
 # -------------------------------------------------
+
 import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.graph_objects as go
 import os
 
-from sklearn.ensemble import GradientBoostingRegressor
-from sklearn.metrics import mean_absolute_error
+from statsmodels.tsa.arima.model import ARIMA
+from scipy.optimize import minimize
 
 # -------------------------------------------------
 # PAGE CONFIG
 # -------------------------------------------------
 
 st.set_page_config(
-    page_title="Smart Reservoir Controller- ML Flood Prediction System",
+    page_title="AQUA NEXUS - Dynamic Reservoir Optimization",
     layout="wide"
 )
 
-# -------------------------------------------------
-# THEME
-# -------------------------------------------------
-
-st.markdown("""
-<style>
-body, .stApp { background-color: #000000; color: #ff0000; }
-.stSidebar { background-color: #0a0000 !important; }
-.stButton>button {
-    background-color: #220000 !important;
-    color: #ff0000 !important;
-    border: 1px solid #ff0000 !important;
-}
-.stMetric>div {
-    background-color: #110000 !important;
-    border: 1px solid #ff0000 !important;
-}
-h1, h2, h3 { color: #ff0000 !important; }
-</style>
-""", unsafe_allow_html=True)
-
 st.title("AQUA NEXUS")
-st.subheader("Reservoir Monitoring + Gradient Boosting Forecast")
+st.subheader("Rainfall Forecast + Dynamic Reservoir Optimization")
 
 # -------------------------------------------------
 # LOAD DATA
@@ -61,6 +41,31 @@ if not os.path.exists(RAIN_PATH):
 res_df_full = pd.read_excel(RES_PATH)
 rain_df_full = pd.read_excel(RAIN_PATH)
 
+# -------------------------------------------------
+# CLEAN DATA
+# -------------------------------------------------
+
+res_df_full.columns = res_df_full.columns.str.strip()
+rain_df_full.columns = rain_df_full.columns.str.strip()
+
+res_df_full["REGION"] = res_df_full["REGION"].astype(str).str.strip().str.title()
+res_df_full["STATE"] = res_df_full["STATE"].astype(str).str.strip().str.title()
+res_df_full["RESERVOIR"] = res_df_full["RESERVOIR"].astype(str).str.strip().str.title()
+
+rain_df_full["CWC Region"] = rain_df_full["CWC Region"].astype(str).str.strip().str.title()
+
+res_df_full["CURRENT STORAGE BCM"] = pd.to_numeric(
+    res_df_full["CURRENT STORAGE BCM"], errors="coerce"
+)
+
+res_df_full["FULL RESERVOIR LEVEL BCM"] = pd.to_numeric(
+    res_df_full["FULL RESERVOIR LEVEL BCM"], errors="coerce"
+)
+
+rain_df_full["Rainfall Actual (mm)"] = pd.to_numeric(
+    rain_df_full["Rainfall Actual (mm)"], errors="coerce"
+)
+
 res_df_full["DATE"] = pd.to_datetime(res_df_full["DATE"])
 
 # -------------------------------------------------
@@ -69,25 +74,49 @@ res_df_full["DATE"] = pd.to_datetime(res_df_full["DATE"])
 
 st.sidebar.header("Reservoir Filters")
 
-regions = res_df_full["REGION"].unique()
+regions = sorted(res_df_full["REGION"].dropna().unique())
 selected_region = st.sidebar.selectbox("Select Region", regions)
 
 region_df = res_df_full[res_df_full["REGION"] == selected_region]
 
-states = region_df["STATE"].unique()
+states = sorted(region_df["STATE"].dropna().unique())
 selected_state = st.sidebar.selectbox("Select State", states)
 
 state_df = region_df[region_df["STATE"] == selected_state]
 
-reservoirs = state_df["RESERVOIR"].unique()
+reservoirs = sorted(state_df["RESERVOIR"].dropna().unique())
 selected_reservoir = st.sidebar.selectbox("Select Reservoir", reservoirs)
-
-# -------------------------------------------------
-# FILTERED DATA
-# -------------------------------------------------
 
 res_df = state_df[state_df["RESERVOIR"] == selected_reservoir].copy()
 res_df = res_df.sort_values("DATE")
+
+if res_df.empty:
+    st.warning("No data available.")
+    st.stop()
+
+latest = res_df.iloc[-1]
+current_storage = latest["CURRENT STORAGE BCM"]
+capacity = latest["FULL RESERVOIR LEVEL BCM"]
+
+# -------------------------------------------------
+# USER INPUTS
+# -------------------------------------------------
+
+st.sidebar.markdown("### Forecast Settings")
+
+forecast_months = st.sidebar.number_input(
+    "Forecast Horizon (Months)",
+    min_value=1,
+    max_value=12,
+    value=1
+)
+
+expected_level = st.sidebar.number_input(
+    "Expected Water Level (BCM)",
+    min_value=0.0,
+    max_value=float(capacity),
+    value=float(current_storage)
+)
 
 # -------------------------------------------------
 # CURRENT STATUS
@@ -95,32 +124,9 @@ res_df = res_df.sort_values("DATE")
 
 st.header(f"Current Status — {selected_reservoir}")
 
-latest = res_df.iloc[-1]
-current_storage = latest["CURRENT STORAGE BCM"]
-capacity = latest["FULL RESERVOIR LEVEL BCM"]
-storage_pct = (current_storage / capacity) * 100
-
-c1, c2, c3 = st.columns(3)
+c1, c2 = st.columns(2)
 c1.metric("Current Storage (BCM)", f"{current_storage:.2f}")
 c2.metric("Capacity (BCM)", f"{capacity:.2f}")
-c3.metric("Storage %", f"{storage_pct:.2f}%")
-
-# -------------------------------------------------
-# WEEKLY TREND
-# -------------------------------------------------
-
-st.markdown("---")
-st.subheader("Weekly Storage Trend")
-
-fig_weekly = go.Figure()
-fig_weekly.add_trace(go.Scatter(
-    x=res_df["DATE"],
-    y=res_df["CURRENT STORAGE BCM"],
-    mode="lines"
-))
-
-fig_weekly.update_layout(template="plotly_dark", height=400)
-st.plotly_chart(fig_weekly, use_container_width=True)
 
 # -------------------------------------------------
 # MONTHLY AGGREGATION
@@ -133,21 +139,25 @@ monthly_storage = res_df.groupby(
     ["Year", "Month", "REGION"]
 )["CURRENT STORAGE BCM"].mean().reset_index()
 
-# Clean rainfall data
-rain_df_full = rain_df_full[[
-    "Year",
-    "Month No",
-    "CWC Region",
-    "Rainfall Actual (mm)"
-]].copy()
+# -------------------------------------------------
+# CLEAN RAIN DATA SAFELY
+# -------------------------------------------------
 
-rain_df_full = rain_df_full.rename(columns={
+rain_df_clean = rain_df_full.copy()
+
+if "Month" in rain_df_clean.columns and "Month No" in rain_df_clean.columns:
+    rain_df_clean = rain_df_clean.drop(columns=["Month"])
+
+rain_df_clean = rain_df_clean.rename(columns={
     "CWC Region": "REGION",
     "Month No": "Month",
     "Rainfall Actual (mm)": "Rainfall_mm"
 })
 
-monthly_rain = rain_df_full.groupby(
+rain_df_clean["Month"] = pd.to_numeric(rain_df_clean["Month"], errors="coerce")
+rain_df_clean["Rainfall_mm"] = pd.to_numeric(rain_df_clean["Rainfall_mm"], errors="coerce")
+
+monthly_rain = rain_df_clean.groupby(
     ["Year", "Month", "REGION"]
 )["Rainfall_mm"].mean().reset_index()
 
@@ -155,139 +165,156 @@ merged_df = pd.merge(
     monthly_storage,
     monthly_rain,
     on=["Year", "Month", "REGION"],
-    how="inner"
+    how="left"
 )
+
+merged_df["Rainfall_mm"] = merged_df["Rainfall_mm"].fillna(0)
 
 if len(merged_df) < 12:
     st.warning("Not enough data for forecasting.")
     st.stop()
 
 # -------------------------------------------------
-# MACHINE LEARNING FORECAST
+# RAINFALL FORECAST
 # -------------------------------------------------
 
 st.markdown("---")
-st.subheader("Gradient Boosting Forecast")
+st.subheader("Rainfall Forecast")
 
-df_ml = merged_df.copy()
+rain_series = merged_df["Rainfall_mm"]
 
-# Create lag features
-df_ml["storage_lag1"] = df_ml["CURRENT STORAGE BCM"].shift(1)
-df_ml["storage_lag2"] = df_ml["CURRENT STORAGE BCM"].shift(2)
-df_ml["rain_lag1"] = df_ml["Rainfall_mm"].shift(1)
-df_ml["rain_lag2"] = df_ml["Rainfall_mm"].shift(2)
+rain_model = ARIMA(rain_series, order=(2,1,2))
+rain_fit = rain_model.fit()
 
-df_ml = df_ml.dropna()
+rain_forecast = rain_fit.forecast(steps=forecast_months)
 
-features = [
-    "storage_lag1",
-    "storage_lag2",
-    "rain_lag1",
-    "rain_lag2"
-]
+st.line_chart(rain_forecast)
 
-X = df_ml[features]
-y = df_ml["CURRENT STORAGE BCM"]
+# -------------------------------------------------
+# INFLOW SCALING (DATA-DRIVEN)
+# -------------------------------------------------
 
-# Time-aware split
-split_index = int(len(df_ml) * 0.8)
+historical_change = merged_df["CURRENT STORAGE BCM"].diff().abs().mean()
+avg_rain = merged_df["Rainfall_mm"].mean()
 
-X_train, X_test = X.iloc[:split_index], X.iloc[split_index:]
-y_train, y_test = y.iloc[:split_index], y.iloc[split_index:]
+inflow_factor = max(historical_change / avg_rain, 0.001)
 
-# Train model
-model = GradientBoostingRegressor(
-    n_estimators=300,
-    learning_rate=0.05,
-    max_depth=3,
-    random_state=42
+# -------------------------------------------------
+# DYNAMIC OPTIMIZATION
+# -------------------------------------------------
+
+def dynamic_optimization(current_storage, rainfall_forecast, capacity):
+
+    horizon = len(rainfall_forecast)
+
+    def objective(releases):
+
+        storage = current_storage
+        total_cost = 0
+
+        for t in range(horizon):
+
+            inflow = rainfall_forecast[t] * inflow_factor
+            storage = storage + inflow - releases[t]
+
+            # Hard physical clamp
+            storage = max(0, min(storage, capacity))
+
+            overflow_penalty = max(0, storage - capacity) ** 2
+            drought_penalty = max(0, 0.3 * capacity - storage) ** 2
+
+            variation_penalty = 0
+            if t > 0:
+                variation_penalty = (releases[t] - releases[t-1]) ** 2
+
+            total_cost += (
+                10 * overflow_penalty +
+                5 * drought_penalty +
+                1 * variation_penalty
+            )
+
+        return total_cost
+
+    initial_guess = np.full(horizon, 0.1 * capacity)
+    bounds = [(0, capacity) for _ in range(horizon)]
+
+    result = minimize(objective, initial_guess, bounds=bounds)
+
+    return result.x
+
+optimal_releases = dynamic_optimization(
+    current_storage,
+    rain_forecast.values,
+    capacity
 )
 
-model.fit(X_train, y_train)
-
-# Evaluate
-y_pred = model.predict(X_test)
-mae = mean_absolute_error(y_test, y_pred)
-
-st.markdown(f"Model MAE: {mae:.4f}")
-
 # -------------------------------------------------
-# 3-MONTH ITERATIVE FORECAST
+# SIMULATE STORAGE
 # -------------------------------------------------
 
-last_row = df_ml.iloc[-1]
+storage_sim = []
+storage = current_storage
 
-storage_lag1 = last_row["CURRENT STORAGE BCM"]
-storage_lag2 = df_ml.iloc[-2]["CURRENT STORAGE BCM"]
-rain_lag1 = last_row["Rainfall_mm"]
-rain_lag2 = df_ml.iloc[-2]["Rainfall_mm"]
+for i in range(forecast_months):
 
-forecast_values = []
+    inflow = rain_forecast.values[i] * inflow_factor
+    storage = storage + inflow - optimal_releases[i]
 
-for _ in range(3):
-
-    X_future = np.array([[storage_lag1, storage_lag2, rain_lag1, rain_lag2]])
-    pred = model.predict(X_future)[0]
-
-    forecast_values.append(pred)
-
-    storage_lag2 = storage_lag1
-    storage_lag1 = pred
-
-storage_forecast = pd.Series(forecast_values)
+    storage = max(0, min(storage, capacity))
+    storage_sim.append(storage)
 
 # -------------------------------------------------
-# PLOT FORECAST
+# PLOT STORAGE
 # -------------------------------------------------
 
-historical_dates = pd.to_datetime(
-    merged_df["Year"].astype(str) + "-" +
-    merged_df["Month"].astype(str) + "-01"
-)
+fig_opt = go.Figure()
 
-future_dates = pd.date_range(
-    start=historical_dates.iloc[-1],
-    periods=4,
-    freq="M"
-)[1:]
-
-fig_forecast = go.Figure()
-
-fig_forecast.add_trace(go.Scatter(
-    x=historical_dates,
-    y=merged_df["CURRENT STORAGE BCM"],
-    mode="lines",
-    name="Historical"
+fig_opt.add_trace(go.Scatter(
+    y=storage_sim,
+    mode="lines+markers",
+    name="Optimized Storage",
+    line=dict(color="cyan")
 ))
 
-fig_forecast.add_trace(go.Scatter(
-    x=future_dates,
-    y=storage_forecast,
-    mode="lines",
-    name="Forecast",
-    line=dict(color="red")
-))
-
-fig_forecast.update_layout(template="plotly_dark", height=450)
-st.plotly_chart(fig_forecast, use_container_width=True)
+fig_opt.update_layout(template="plotly_dark", height=400)
+st.plotly_chart(fig_opt, width="stretch")
 
 # -------------------------------------------------
-# RISK ASSESSMENT
+# RELEASE STRATEGY
 # -------------------------------------------------
 
-final_forecast = storage_forecast.iloc[-1]
-forecast_pct = (final_forecast / capacity) * 100
+st.subheader("Optimal Release Strategy")
+
+for i, r in enumerate(optimal_releases):
+    st.write(f"Month {i+1}: Release {r:.2f} BCM")
+
+# -------------------------------------------------
+# RISK + EXPECTATION COMPARISON
+# -------------------------------------------------
+
+final_storage = storage_sim[-1]
+forecast_pct = (final_storage / capacity) * 100
 
 st.markdown("---")
-st.subheader("Forecast Risk Assessment")
+st.subheader("Final Risk Assessment")
 
-if forecast_pct > 95:
-    st.error("Reservoir Likely to Overflow")
+if final_storage >= capacity:
+    st.error("Reservoir At Maximum Capacity")
 elif forecast_pct > 85:
-    st.warning("High Flood Risk Approaching")
+    st.warning("High Flood Risk")
 elif forecast_pct < 25:
     st.warning("Drought Risk")
 else:
-    st.success("Storage Within Safe Limits")
+    st.success("Safe Operating Zone")
 
-st.metric("Projected Storage % (3 Months)", f"{forecast_pct:.2f}%")
+st.metric("Projected Storage %", f"{forecast_pct:.2f}%")
+
+st.markdown("---")
+st.subheader("Expectation Comparison")
+
+if final_storage > expected_level:
+    st.warning("Projected level exceeds expected level")
+elif final_storage < expected_level:
+    st.info("Projected level below expected level")
+else:
+    st.success("Projected matches expected level")
